@@ -65,7 +65,7 @@ git commit -a -m $TRAVIS_COMMIT
 
 git push > /dev/null 2>/dev/null
 
-##https://brichards64:$GITHUB_API_KEY@github.com/brichards64/brichards64.github.io.git > /dev/null 2>/dev/null
+#https://brichards64:$GITHUB_API_KEY@github.com/brichards64/brichards64.github.io.git > /dev/null 2>/dev/null
 
 #################################################################################
 
