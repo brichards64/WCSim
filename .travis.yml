@@ -21,10 +21,11 @@ install: true
 cache:
   directories:
     - /home/travis/reference
+    
 
 before_cache:
+  - cp output/* reference/
   - mv reference /home/travis/
-
 
 script: ./CI.sh;
 
