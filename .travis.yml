@@ -27,5 +27,5 @@ cache:
     - /home/travis/Geant4
     - /home/travis/root
     
-script: ./CI.sh dependancies;
+script: ./CI.sh normal;
 
