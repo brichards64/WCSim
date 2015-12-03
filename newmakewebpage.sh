@@ -210,7 +210,7 @@ echo "
 " >> index.html
 
 tail -n 20 log.txt | cat log.txt
-shotcom=`expr substr ${TRAVIS_COMMIT} 0 7`
+shotcom=`echo $a | cut -c1-7`
 echo  `date`" [commit="$shortcom"]: "$log  >>log.txt  
 
 message=`date`" [commit="$shortcom"]: "$log
