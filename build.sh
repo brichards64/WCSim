@@ -1,8 +1,13 @@
 #!/bin/bash
 
-#git config --global credential.helper store
-#rm -rf build/
-#mkdir build
+# 03/12/2015 Written by Benjamin Richards (b.richards@qmul.ac.uk)
+#
+# Build script to build the WCSim package and dependancies from HyperK
+#
+
+
+
+#################### Build dependancies and WCSim #####################
 cd build
 if [ $1 = "dependancies" ]
 then
@@ -12,6 +17,10 @@ echo '2'|./get_release.sh
 source Source_At_Start.sh
 ./build.sh build
 fi
+
+#######################################################################
+
+#################### Build just WCSim #################################
 
 if [ $1 != "dependancies" ]
 then
@@ -23,4 +32,7 @@ make rootcint > "../hk-hyperk/log/wcsim-build.log" 2>&1
 make
 fi
 
+#######################################################################
+
 cd ../../
+

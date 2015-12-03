@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# 02/12/2015 Written by Benjamin Richards (b.richards@qmul.ac.uk)
+#
+# Automatic webpage generator for build and phyics tests. Outout is customised through tests.txt file.
+#
+
+
 ################## index.html head  #######################
 
 echo "<head>
@@ -40,12 +46,6 @@ xxxxlogmessagexxxx <br>
 <p>
 <table width='800' border='1' align='center'>
 " >> index.html
-#<tr>
-#<th scope='col'><div align='center'>Job Id </div></th>
-#<th scope='col'><div align='center'>Description</div></th>
-#<th scope='col'><div align'center'>Status</div></th>
-#</tr>
-#" >> index.html
 
 
 ####################################################
@@ -117,6 +117,7 @@ do
 	fi
 
 #####################################################   
+
 ################## Physics validation ###############
 
 	if [ $test == "PhysicsValidation" ]
@@ -153,6 +154,7 @@ do
 	fi
 	
 ####################################################  
+
 ################## Blank line  ###############
 
 	if [ $test == "Blank" ]
@@ -228,7 +230,6 @@ echo `more index.html | sed s/xxxxlogmessagexxxx/"$message"/`  >index.html
 if [ "$log" != "SUCCESSFUL" ]
 then
 exit 1
-#echo $log | mail -s “WCSim\ VALIDATION\ ERROR!!!!” b.richards@qmul.ac.uk
 fi
 
 ####################################################
