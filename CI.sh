@@ -45,6 +45,8 @@ echo PID test $PID
 if [ $1 = "normal" ]
 then
 mv /home/travis/reference ./
+else
+rm -rf /home/travis/reference
 fi
 
 if [ $1 != "dependancies" ]
@@ -54,6 +56,12 @@ mv /home/travis/hk-config ./build/
 mv /home/travis/CLHEP ./build/
 mv /home/travis/Geant4 ./build/
 mv /home/travis/root ./build/
+else
+rm -rf /home/travis/hk-hyperk 
+rm -rf /home/travis/hk-config 
+rm -rf /home/travis/CLHEP 
+rm -rf /home/travis/Geant4 
+rm -rf /home/travis/root 
 fi
 
 #################################################################################
