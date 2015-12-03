@@ -73,6 +73,7 @@ fi
 
 ./build/hk-hyperk/Source_At_Start.sh
 ./newmakewebpage.sh 
+exitstatus=$?
 
 #################################################################################
 
@@ -114,3 +115,5 @@ mv ./build/root /home/travis/
 kill -9 $PID 
 
 #################################################################################
+
+exit $exitstatus
