@@ -50,15 +50,15 @@ g++ daq_readfilemain.C -o daq_readfilemain -I ../include/ -L ../ -lWCSimRoot `ro
 
 
 
-unlink ../../../output/analysed_wcsim_10e-_SuperK_Stacking_Only_PMTCollEff_on_SKI_digi0_200_NDigits_fails0_NDigits25_200_DarkNoiseM1C1.367R4.2W1500.root
+#unlink ../../../output/analysed_wcsim_10e-_SuperK_Stacking_Only_PMTCollEff_on_SKI_digi0_200_NDigits_fails0_NDigits25_200_DarkNoiseM1C1.367R4.2W1500.root
 
-unlink ../../../output/analysed_wcsim_100e-_SuperK_Stacking_Only_PMTCollEff_on_SKI_digi0_200_NDigits_fails0_NDigits25_200_DarkNoiseM1C1.367R4.2W1500.root
+#unlink ../../../output/analysed_wcsim_100e-_SuperK_Stacking_Only_PMTCollEff_on_SKI_digi0_200_NDigits_fails0_NDigits25_200_DarkNoiseM1C1.367R4.2W1500.root
 
-unlink ../../../output/analysed_wcsim_500e-_SuperK_Stacking_Only_PMTCollEff_on_SKI_digi0_200_NDigits_fails0_NDigits25_200_DarkNoiseM1C1.367R4.2W1500.root
+#unlink ../../../output/analysed_wcsim_500e-_SuperK_Stacking_Only_PMTCollEff_on_SKI_digi0_200_NDigits_fails0_NDigits25_200_DarkNoiseM1C1.367R4.2W1500.root
 
-unlink ../../../output/analysed_wcsim_200mu-_SuperK_Stacking_Only_PMTCollEff_on_SKI_digi0_200_NDigits_fails0_NDigits25_200_DarkNoiseM1C1.367R4.2W1500.root
+#unlink ../../../output/analysed_wcsim_200mu-_SuperK_Stacking_Only_PMTCollEff_on_SKI_digi0_200_NDigits_fails0_NDigits25_200_DarkNoiseM1C1.367R4.2W1500.root
 
-unlink ../../../output/analysed_wcsim_800mu-_SuperK_Stacking_Only_PMTCollEff_on_SKI_digi0_200_NDigits_fails0_NDigits25_200_DarkNoiseM1C1.367R4.2W1500.root
+#unlink ../../../output/analysed_wcsim_800mu-_SuperK_Stacking_Only_PMTCollEff_on_SKI_digi0_200_NDigits_fails0_NDigits25_200_DarkNoiseM1C1.367R4.2W1500.root
 
 
 

@@ -39,12 +39,13 @@ xxxxlogmessagexxxx <br>
 </table>
 <p>
 <table width='800' border='1' align='center'>
-<tr>
-<th scope='col'><div align='center'>Job Id </div></th>
-<th scope='col'><div align='center'>Description</div></th>
-<th scope='col'><div align'center'>Status</div></th>
-</tr>
 " >> index.html
+#<tr>
+#<th scope='col'><div align='center'>Job Id </div></th>
+#<th scope='col'><div align='center'>Description</div></th>
+#<th scope='col'><div align'center'>Status</div></th>
+#</tr>
+#" >> index.html
 
 
 ####################################################
@@ -210,7 +211,7 @@ echo "
 tail -n 20 log.txt | cat log.txt
 echo  `date` " : "$log  >>log.txt  
 
-message=`date`" : "$log
+message=`date`" [commit="$TRAVIS_COMMIT"]: "$log
 
 echo `more index.html | sed s/xxxxlogmessagexxxx/"$message"/`  >index.html
 
@@ -224,7 +225,7 @@ echo `more index.html | sed s/xxxxlogmessagexxxx/"$message"/`  >index.html
 
 if [ "$log" != "SUCCESSFUL" ]
 then
-echo $log | mail -s “WCSim\ VALIDATION\ ERROR!!!!” b.richards@qmul.ac.uk
+#echo $log | mail -s “WCSim\ VALIDATION\ ERROR!!!!” b.richards@qmul.ac.uk
 fi
 
 ####################################################
