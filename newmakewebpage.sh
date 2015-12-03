@@ -210,9 +210,9 @@ echo "
 " >> index.html
 
 tail -n 20 log.txt | cat log.txt
-echo  `date` " : "$log  >>log.txt  
-
 shotcom=`expr substr ${TRAVIS_COMMIT} 0 7`
+echo  `date`" [commit="$shortcom"]: "$log  >>log.txt  
+
 message=`date`" [commit="$shortcom"]: "$log
 
 echo `more index.html | sed s/xxxxlogmessagexxxx/"$message"/`  >index.html
