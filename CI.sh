@@ -1,6 +1,6 @@
 #! /usr/bin/env sh
 
-############################## Setting up git credentials #######################
+############################## Setting up git credentials ######################
 
 git config --global credential.helper store 
 
