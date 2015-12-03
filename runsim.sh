@@ -7,8 +7,8 @@ source hk-hyperk/Source_At_Start.sh
 cd WCSim/
 
 
-cp -r /data/hyperk/WCSimValidation/NBRTT/compout/rootwc ./
-cp /data/hyperk/WCSimValidation/NBRTT/compout/wcsim_*.mac ./
+cp -r ../../compout/rootwc ./
+cp ../../compout/wcsim_*.mac ./
 
 
 
@@ -30,7 +30,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:`pwd`
 
 cd sample-root-scripts/
 
-cp /data/hyperk/WCSimValidation/NBRTT/compout/daq_readfilemain.C ./
+cp ../../../compout/daq_readfilemain.C ./
 
 g++ daq_readfilemain.C -o daq_readfilemain -I ../include/ -L ../ -lWCSimRoot `root-config --libs --cflags`
 
