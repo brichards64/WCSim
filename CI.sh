@@ -36,18 +36,40 @@ echo PID test $PID
 #################################################################################
 
 ############################## Transfer cached reference output #################
- 
-#mv /home/travis/reference ./
+
+if [ $1 = "normal" ]
+then
+mv /home/travis/reference ./
+fi
+
+if [ $1 != "dependancies" ]
+then
+mv /home/travis/hk-hyperk ./build/
+mv /home/travis/hk-config ./build/
+mv /home/travis/CLHEP ./build/
+mv /home/travis/Geant4 ./build/
+mv /home/travis/root ./build/
+fi
 
 #################################################################################
 
 
 ########################### Start build and run ################################# 
 
+if [ $1 != "normal" ]
+then
 mkdir reference
+fi
+
 mkdir output
-./build.sh
+
+./build.sh $1
 ./runsim.sh
+
+if [ $1 != "normal" ]
+then
+cp output/* reference/
+fi
 
 ./build/hk-hyperk/Source_At_Start.sh
 ./newmakewebpage.sh 
@@ -69,6 +91,23 @@ git push > /dev/null 2>/dev/null
 #https://brichards64:$GITHUB_API_KEY@github.com/brichards64/brichards64.github.io.git > /dev/null 2>/dev/null
 
 #################################################################################
+
+
+if [ $1 != "normal" ]
+then
+cp output/* reference/
+fi
+
+mv ./reference  /home/travis/
+mv ./build/hk-hyperk /home/travis/
+mv ./build/hk-config /home/travis/
+mv ./build/CLHEP /home/travis/
+mv ./build/Geant4 /home/travis/
+mv ./build/root /home/travis/
+
+
+
+
 
 ################################# Kill build timeout trick ######################
 

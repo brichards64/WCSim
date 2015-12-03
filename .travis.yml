@@ -27,15 +27,5 @@ cache:
     - /home/travis/Geant4
     - /home/travis/root
     
-
-before_cache:
-  - cp output/* reference/
-  - mv reference /home/travis/
-  - mv build/hk-hyperk /home/travis/
-  - mv build/CLHEP /home/travis/
-  - mv build/Geant4 /home/travis/
-  - mv build/hk-config /home/travis/
-  - mv build/root /hometravis/
-  - 
 script: ./CI.sh;
 
