@@ -71,7 +71,7 @@ then
 cp output/* reference/
 fi
 
-source ./build/hk-hyperk/Source_At_Start.sh
+./build/hk-hyperk/Source_At_Start.sh
 ./newmakewebpage.sh 
 exitstatus=$?
 
