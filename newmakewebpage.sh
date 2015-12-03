@@ -225,6 +225,7 @@ echo `more index.html | sed s/xxxxlogmessagexxxx/"$message"/`  >index.html
 
 if [ "$log" != "SUCCESSFUL" ]
 then
+exit 1
 #echo $log | mail -s “WCSim\ VALIDATION\ ERROR!!!!” b.richards@qmul.ac.uk
 fi
 
