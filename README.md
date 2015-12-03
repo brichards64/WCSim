@@ -23,6 +23,8 @@ You can follow issues/requests etc by watching the GitHub respository.
 
 ## Current notes and how to build
 
+To check current build status got to: www.brichards64.github.io/WCSim
+
 Build Instructions:
 
 You should have a recent and working version of ROOT and GEANT4.
