@@ -128,6 +128,7 @@ do
 	    mkdir $var1
 	    
 	    cd ./compout
+	    source ./build/hk-hyperk/Source_At_Start.sh
 	    ./compareroot ../$var1 $var2 $var3 
 	    if [ $? -ne 0 ]
 	    then
