@@ -37,13 +37,14 @@ echo PID test $PID
 
 ############################## Transfer cached reference output #################
  
-mv /home/travis/reference ./
+#mv /home/travis/reference ./
 
 #################################################################################
 
 
 ########################### Start build and run ################################# 
 
+mkdir reference
 mkdir output
 ./build.sh
 ./runsim.sh
