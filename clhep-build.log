@@ -500,18 +500,69 @@ config.status: creating clhep-config
 config.status: executing depfiles commands
 Making all in Units
 make[1]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Units'
- cd . && /bin/bash ./config.status Makefile 
+cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/Units/autotools/missing --run aclocal-1.9 
+/home/travis/build/brichards64/tmp/build/CLHEP/Units/autotools/missing: line 52: aclocal-1.9: command not found
+WARNING: `aclocal-1.9' is missing on your system.  You should only need it if
+         you modified `acinclude.m4' or `configure.ac'.  You might want
+         to install the `Automake' and `Perl' packages.  Grab them from
+         any GNU archive site.
+ cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/Units/autotools/missing --run automake-1.9 --foreign 
+/home/travis/build/brichards64/tmp/build/CLHEP/Units/autotools/missing: line 52: automake-1.9: command not found
+WARNING: `automake-1.9' is missing on your system.  You should only need it if
+         you modified `Makefile.am', `acinclude.m4' or `configure.ac'.
+         You might want to install the `Automake' and `Perl' packages.
+         Grab them from any GNU archive site.
+cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/Units/autotools/missing --run autoconf
+/bin/bash ./config.status --recheck
+running /bin/bash ./configure  --prefix=/home/travis/build/brichards64/tmp/build/CLHEP/install CXX=g++ --cache-file=/dev/null --srcdir=.  --no-create --no-recursion
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking target system type... x86_64-unknown-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether ln -s works... yes
+checking for ranlib... ranlib
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking for style of include used by make... GNU
+checking dependency style of g++... gcc3
+checking how to run the C++ preprocessor... g++ -E
+checking for open in -lc -Wl,--as-needed... yes
+configure: creating ./config.status
+ /bin/bash ./config.status
 config.status: creating Makefile
+config.status: WARNING:  'Makefile.in' seems to ignore the --datarootdir setting
+config.status: creating Units/Makefile
+config.status: WARNING:  'Units/Makefile.in' seems to ignore the --datarootdir setting
+config.status: creating doc/Makefile
+config.status: WARNING:  'doc/Makefile.in' seems to ignore the --datarootdir setting
+config.status: creating test/Makefile
+config.status: WARNING:  'test/Makefile.in' seems to ignore the --datarootdir setting
+config.status: creating Units-deps
+config.status: creating Units/copy-header.pl
+config.status: creating Units-config
+config.status: creating test/testUnits.sh
+config.status: creating Units/defs.h
+config.status: executing depfiles commands
 make[1]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Units'
 make[1]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Units'
 Making all in Units
 make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Units/Units'
- cd .. && /bin/bash ./config.status Units/Makefile 
-config.status: creating Units/Makefile
-make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Units/Units'
-make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Units/Units'
+cd .. && /bin/sh /home/travis/build/brichards64/tmp/build/CLHEP/Units/autotools/missing --run autoheader
+rm -f stamp-h1
+touch defs.h.in
+cd .. && /bin/sh ./config.status Units/defs.h
+config.status: creating Units/defs.h
 make  all-am
 make[3]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Units/Units'
+make[3]: Nothing to be done for `all-am'.
 make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Units/Units'
 make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Units/Units'
 Making all in .
@@ -528,11 +579,6 @@ make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Units
 make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Units'
 Making all in test
 make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Units/test'
- cd .. && /bin/bash ./config.status test/Makefile depfiles
-config.status: creating test/Makefile
-config.status: executing depfiles commands
-make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Units/test'
-make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Units/test'
 make[2]: Nothing to be done for `all'.
 make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Units/test'
 make[1]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Units'
@@ -548,6 +594,11 @@ make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Util
 config.status: creating Utility/Makefile
 make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Utility/Utility'
 make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Utility/Utility'
+cd .. && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/Utility/autotools/missing --run autoheader
+rm -f stamp-h1
+touch defs.h.in
+cd .. && /bin/bash ./config.status Utility/defs.h
+config.status: creating Utility/defs.h
 make  all-am
 make[3]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Utility/Utility'
 make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Utility/Utility'
@@ -816,76 +867,19 @@ make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Vecto
 make[1]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Vector'
 Making all in Evaluator
 make[1]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator'
- cd . && /bin/bash ./config.status Makefile 
-config.status: creating Makefile
-make[1]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator'
-make[1]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator'
-Making all in Evaluator
-make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/Evaluator'
- cd .. && /bin/bash ./config.status Evaluator/Makefile 
-config.status: creating Evaluator/Makefile
-make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/Evaluator'
-make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/Evaluator'
-make  all-am
-make[3]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/Evaluator'
-make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/Evaluator'
-make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/Evaluator'
-Making all in .
-make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator'
-/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/autotools/install-sh -d /home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/CLHEP;
-make[3]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/Evaluator'
- install headers in /home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/CLHEP/Evaluator 
-cp -p Evaluator.h /home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/CLHEP/Evaluator/Evaluator.h
-cp -p defs.h /home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/CLHEP/Evaluator/defs.h
-make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/Evaluator'
-make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator'
-Making all in src
-make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/src'
- cd .. && /bin/bash ./config.status src/Makefile depfiles
-config.status: creating src/Makefile
-config.status: executing depfiles commands
-make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/src'
-make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/src'
-if g++ -DHAVE_CONFIG_H -I. -I. -I../Evaluator -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -MT Evaluator.o -MD -MP -MF ".deps/Evaluator.Tpo" -c -o Evaluator.o Evaluator.cc; \
-	then mv -f ".deps/Evaluator.Tpo" ".deps/Evaluator.Po"; else rm -f ".deps/Evaluator.Tpo"; exit 1; fi
-if g++ -DHAVE_CONFIG_H -I. -I. -I../Evaluator -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -MT setStdMath.o -MD -MP -MF ".deps/setStdMath.Tpo" -c -o setStdMath.o setStdMath.cc; \
-	then mv -f ".deps/setStdMath.Tpo" ".deps/setStdMath.Po"; else rm -f ".deps/setStdMath.Tpo"; exit 1; fi
-if g++ -DHAVE_CONFIG_H -I. -I. -I../Evaluator -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -MT setSystemOfUnits.o -MD -MP -MF ".deps/setSystemOfUnits.Tpo" -c -o setSystemOfUnits.o setSystemOfUnits.cc; \
-	then mv -f ".deps/setSystemOfUnits.Tpo" ".deps/setSystemOfUnits.Po"; else rm -f ".deps/setSystemOfUnits.Tpo"; exit 1; fi
-rm -f libCLHEP-Evaluator-2.1.0.1.a
-ar cru libCLHEP-Evaluator-2.1.0.1.a Evaluator.o setStdMath.o setSystemOfUnits.o 
-ranlib libCLHEP-Evaluator-2.1.0.1.a
-test -d shared || mkdir shared
-g++ -DHAVE_CONFIG_H -I. -I. -I../Evaluator -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -fPIC -DPIC -c -o shared/Evaluator.o Evaluator.cc
-g++ -DHAVE_CONFIG_H -I. -I. -I../Evaluator -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -fPIC -DPIC -c -o shared/setStdMath.o setStdMath.cc
-g++ -DHAVE_CONFIG_H -I. -I. -I../Evaluator -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -fPIC -DPIC -c -o shared/setSystemOfUnits.o setSystemOfUnits.cc
-g++ -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2   -o libCLHEP-Evaluator-2.1.0.1.so -shared -Wl,--no-undefined -Wl,--as-needed -Wl,-soname,libCLHEP-Evaluator-2.1.0.1.so shared/Evaluator.o shared/setStdMath.o shared/setSystemOfUnits.o
-make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/src'
-Making all in test
-make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/test'
- cd .. && /bin/bash ./config.status test/Makefile depfiles
-config.status: creating test/Makefile
-config.status: executing depfiles commands
-make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/test'
-make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/test'
-make[2]: Nothing to be done for `all'.
-make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/test'
-make[1]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator'
-Making all in GenericFunctions
-make[1]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions'
-cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions/autotools/missing --run aclocal-1.9 
-/home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions/autotools/missing: line 52: aclocal-1.9: command not found
+cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/autotools/missing --run aclocal-1.9 
+/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/autotools/missing: line 52: aclocal-1.9: command not found
 WARNING: `aclocal-1.9' is missing on your system.  You should only need it if
          you modified `acinclude.m4' or `configure.ac'.  You might want
          to install the `Automake' and `Perl' packages.  Grab them from
          any GNU archive site.
- cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions/autotools/missing --run automake-1.9 --foreign 
-/home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions/autotools/missing: line 52: automake-1.9: command not found
+ cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/autotools/missing --run automake-1.9 --foreign 
+/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/autotools/missing: line 52: automake-1.9: command not found
 WARNING: `automake-1.9' is missing on your system.  You should only need it if
          you modified `Makefile.am', `acinclude.m4' or `configure.ac'.
          You might want to install the `Automake' and `Perl' packages.
          Grab them from any GNU archive site.
-cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions/autotools/missing --run autoconf
+cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/autotools/missing --run autoconf
 /bin/bash ./config.status --recheck
 running /bin/bash ./configure  --prefix=/home/travis/build/brichards64/tmp/build/CLHEP/install CXX=g++ --cache-file=/dev/null --srcdir=.  --no-create --no-recursion
 checking build system type... x86_64-unknown-linux-gnu
@@ -912,28 +906,78 @@ configure: creating ./config.status
  /bin/bash ./config.status
 config.status: creating Makefile
 config.status: WARNING:  'Makefile.in' seems to ignore the --datarootdir setting
-config.status: creating GenericFunctions/Makefile
-config.status: WARNING:  'GenericFunctions/Makefile.in' seems to ignore the --datarootdir setting
+config.status: creating Evaluator/Makefile
+config.status: WARNING:  'Evaluator/Makefile.in' seems to ignore the --datarootdir setting
 config.status: creating src/Makefile
 config.status: WARNING:  'src/Makefile.in' seems to ignore the --datarootdir setting
-config.status: creating doc/Makefile
-config.status: WARNING:  'doc/Makefile.in' seems to ignore the --datarootdir setting
 config.status: creating test/Makefile
 config.status: WARNING:  'test/Makefile.in' seems to ignore the --datarootdir setting
-config.status: creating GenericFunctions-deps
-config.status: creating GenericFunctions/copy-header.pl
-config.status: creating GenericFunctions-config
-config.status: creating test/testGenericFunctions.sh
-config.status: creating GenericFunctions/defs.h
+config.status: creating Evaluator-deps
+config.status: creating Evaluator/copy-header.pl
+config.status: creating Evaluator-config
+config.status: creating test/testEvaluator.sh
+config.status: creating Evaluator/defs.h
 config.status: executing depfiles commands
+make[1]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator'
+make[1]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator'
+Making all in Evaluator
+make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/Evaluator'
+cd .. && /bin/sh /home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/autotools/missing --run autoheader
+rm -f stamp-h1
+touch defs.h.in
+cd .. && /bin/sh ./config.status Evaluator/defs.h
+config.status: creating Evaluator/defs.h
+make  all-am
+make[3]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/Evaluator'
+make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/Evaluator'
+make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/Evaluator'
+Making all in .
+make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator'
+/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/autotools/install-sh -d /home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/CLHEP;
+make[3]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/Evaluator'
+ install headers in /home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/CLHEP/Evaluator 
+cp -p Evaluator.h /home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/CLHEP/Evaluator/Evaluator.h
+cp -p defs.h /home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/CLHEP/Evaluator/defs.h
+make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/Evaluator'
+make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator'
+Making all in src
+make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/src'
+if g++ -DHAVE_CONFIG_H -I. -I. -I../Evaluator -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -MT Evaluator.o -MD -MP -MF ".deps/Evaluator.Tpo" -c -o Evaluator.o Evaluator.cc; \
+	then mv -f ".deps/Evaluator.Tpo" ".deps/Evaluator.Po"; else rm -f ".deps/Evaluator.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I../Evaluator -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -MT setStdMath.o -MD -MP -MF ".deps/setStdMath.Tpo" -c -o setStdMath.o setStdMath.cc; \
+	then mv -f ".deps/setStdMath.Tpo" ".deps/setStdMath.Po"; else rm -f ".deps/setStdMath.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I../Evaluator -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -MT setSystemOfUnits.o -MD -MP -MF ".deps/setSystemOfUnits.Tpo" -c -o setSystemOfUnits.o setSystemOfUnits.cc; \
+	then mv -f ".deps/setSystemOfUnits.Tpo" ".deps/setSystemOfUnits.Po"; else rm -f ".deps/setSystemOfUnits.Tpo"; exit 1; fi
+rm -f libCLHEP-Evaluator-2.1.0.1.a
+ar cru libCLHEP-Evaluator-2.1.0.1.a Evaluator.o setStdMath.o setSystemOfUnits.o 
+ranlib libCLHEP-Evaluator-2.1.0.1.a
+test -d shared || mkdir shared
+g++ -DHAVE_CONFIG_H -I. -I. -I../Evaluator -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -fPIC -DPIC -c -o shared/Evaluator.o Evaluator.cc
+g++ -DHAVE_CONFIG_H -I. -I. -I../Evaluator -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -fPIC -DPIC -c -o shared/setStdMath.o setStdMath.cc
+g++ -DHAVE_CONFIG_H -I. -I. -I../Evaluator -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -fPIC -DPIC -c -o shared/setSystemOfUnits.o setSystemOfUnits.cc
+g++ -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2   -o libCLHEP-Evaluator-2.1.0.1.so -shared -Wl,--no-undefined -Wl,--as-needed -Wl,-soname,libCLHEP-Evaluator-2.1.0.1.so shared/Evaluator.o shared/setStdMath.o shared/setSystemOfUnits.o
+make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/src'
+Making all in test
+make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/test'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator/test'
+make[1]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Evaluator'
+Making all in GenericFunctions
+make[1]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions'
+ cd . && /bin/bash ./config.status Makefile 
+config.status: creating Makefile
 make[1]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions'
 make[1]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions'
 Making all in GenericFunctions
 make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions/GenericFunctions'
-cd .. && /bin/sh /home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions/autotools/missing --run autoheader
+ cd .. && /bin/bash ./config.status GenericFunctions/Makefile 
+config.status: creating GenericFunctions/Makefile
+make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions/GenericFunctions'
+make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions/GenericFunctions'
+cd .. && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions/autotools/missing --run autoheader
 rm -f stamp-h1
 touch defs.h.in
-cd .. && /bin/sh ./config.status GenericFunctions/defs.h
+cd .. && /bin/bash ./config.status GenericFunctions/defs.h
 config.status: creating GenericFunctions/defs.h
 make  all-am
 make[3]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions/GenericFunctions'
@@ -1046,6 +1090,11 @@ cp -p defs.h /home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions/CLH
 make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions/GenericFunctions'
 make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions'
 Making all in src
+make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions/src'
+ cd .. && /bin/bash ./config.status src/Makefile depfiles
+config.status: creating src/Makefile
+config.status: executing depfiles commands
+make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions/src'
 make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions/src'
 if g++ -DHAVE_CONFIG_H -I. -I. -I../GenericFunctions -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -MT Abs.o -MD -MP -MF ".deps/Abs.Tpo" -c -o Abs.o Abs.cc; \
 	then mv -f ".deps/Abs.Tpo" ".deps/Abs.Po"; else rm -f ".deps/Abs.Tpo"; exit 1; fi
@@ -1280,21 +1329,77 @@ g++ -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2   -o libCLHEP-GenericFunctions
 make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions/src'
 Making all in test
 make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions/test'
+ cd .. && /bin/bash ./config.status test/Makefile depfiles
+config.status: creating test/Makefile
+config.status: executing depfiles commands
+make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions/test'
+make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions/test'
 make[2]: Nothing to be done for `all'.
 make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions/test'
 make[1]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/GenericFunctions'
 Making all in Geometry
 make[1]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Geometry'
- cd . && /bin/bash ./config.status Makefile 
+cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/Geometry/autotools/missing --run aclocal-1.9 
+/home/travis/build/brichards64/tmp/build/CLHEP/Geometry/autotools/missing: line 52: aclocal-1.9: command not found
+WARNING: `aclocal-1.9' is missing on your system.  You should only need it if
+         you modified `acinclude.m4' or `configure.ac'.  You might want
+         to install the `Automake' and `Perl' packages.  Grab them from
+         any GNU archive site.
+ cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/Geometry/autotools/missing --run automake-1.9 --foreign 
+/home/travis/build/brichards64/tmp/build/CLHEP/Geometry/autotools/missing: line 52: automake-1.9: command not found
+WARNING: `automake-1.9' is missing on your system.  You should only need it if
+         you modified `Makefile.am', `acinclude.m4' or `configure.ac'.
+         You might want to install the `Automake' and `Perl' packages.
+         Grab them from any GNU archive site.
+cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/Geometry/autotools/missing --run autoconf
+/bin/bash ./config.status --recheck
+running /bin/bash ./configure  --prefix=/home/travis/build/brichards64/tmp/build/CLHEP/install CXX=g++ --cache-file=/dev/null --srcdir=.  --no-create --no-recursion
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking target system type... x86_64-unknown-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether ln -s works... yes
+checking for ranlib... ranlib
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking for style of include used by make... GNU
+checking dependency style of g++... gcc3
+checking how to run the C++ preprocessor... g++ -E
+checking for open in -lc -Wl,--as-needed... yes
+configure: creating ./config.status
+ /bin/bash ./config.status
 config.status: creating Makefile
+config.status: WARNING:  'Makefile.in' seems to ignore the --datarootdir setting
+config.status: creating Geometry/Makefile
+config.status: WARNING:  'Geometry/Makefile.in' seems to ignore the --datarootdir setting
+config.status: creating src/Makefile
+config.status: WARNING:  'src/Makefile.in' seems to ignore the --datarootdir setting
+config.status: creating test/Makefile
+config.status: WARNING:  'test/Makefile.in' seems to ignore the --datarootdir setting
+config.status: creating Geometry-deps
+config.status: creating Geometry/copy-header.pl
+config.status: creating Geometry-config
+config.status: creating test/testBasicVector3D.sh
+config.status: creating test/testBug6740.sh
+config.status: creating Geometry/defs.h
+config.status: executing depfiles commands
 make[1]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Geometry'
 make[1]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Geometry'
 Making all in Geometry
 make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Geometry/Geometry'
- cd .. && /bin/bash ./config.status Geometry/Makefile 
-config.status: creating Geometry/Makefile
-make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Geometry/Geometry'
-make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Geometry/Geometry'
+cd .. && /bin/sh /home/travis/build/brichards64/tmp/build/CLHEP/Geometry/autotools/missing --run autoheader
+rm -f stamp-h1
+touch defs.h.in
+cd .. && /bin/sh ./config.status Geometry/defs.h
+config.status: creating Geometry/defs.h
 make  all-am
 make[3]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Geometry/Geometry'
 make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Geometry/Geometry'
@@ -1360,11 +1465,6 @@ make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Units
 make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Geometry'
 Making all in src
 make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Geometry/src'
- cd .. && /bin/bash ./config.status src/Makefile depfiles
-config.status: creating src/Makefile
-config.status: executing depfiles commands
-make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Geometry/src'
-make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Geometry/src'
 if g++ -DHAVE_CONFIG_H -I. -I. -I../Geometry -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -MT BasicVector3D.o -MD -MP -MF ".deps/BasicVector3D.Tpo" -c -o BasicVector3D.o BasicVector3D.cc; \
 	then mv -f ".deps/BasicVector3D.Tpo" ".deps/BasicVector3D.Po"; else rm -f ".deps/BasicVector3D.Tpo"; exit 1; fi
 if g++ -DHAVE_CONFIG_H -I. -I. -I../Geometry -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -MT Normal3D.o -MD -MP -MF ".deps/Normal3D.Tpo" -c -o Normal3D.o Normal3D.cc; \
@@ -1390,11 +1490,6 @@ g++ -DHAVE_CONFIG_H -I. -I. -I../Geometry -I..   -O -ansi -pedantic -Wall -D_GNU
 g++ -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2   -o libCLHEP-Geometry-2.1.0.1.so -shared -Wl,--no-undefined -Wl,--as-needed -Wl,-soname,libCLHEP-Geometry-2.1.0.1.so shared/BasicVector3D.o shared/Normal3D.o shared/Plane3D.o shared/Point3D.o shared/Transform3D.o shared/Vector3D.o -L../../Vector/src -lCLHEP-Vector-2.1.0.1
 make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Geometry/src'
 Making all in test
-make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Geometry/test'
- cd .. && /bin/bash ./config.status test/Makefile depfiles
-config.status: creating test/Makefile
-config.status: executing depfiles commands
-make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Geometry/test'
 make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Geometry/test'
 make[2]: Nothing to be done for `all'.
 make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Geometry/test'
@@ -1681,68 +1776,16 @@ make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Rando
 make[1]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Random'
 Making all in Matrix
 make[1]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Matrix'
-cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/Matrix/autotools/missing --run aclocal-1.9 
-/home/travis/build/brichards64/tmp/build/CLHEP/Matrix/autotools/missing: line 52: aclocal-1.9: command not found
-WARNING: `aclocal-1.9' is missing on your system.  You should only need it if
-         you modified `acinclude.m4' or `configure.ac'.  You might want
-         to install the `Automake' and `Perl' packages.  Grab them from
-         any GNU archive site.
- cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/Matrix/autotools/missing --run automake-1.9 --foreign 
-/home/travis/build/brichards64/tmp/build/CLHEP/Matrix/autotools/missing: line 52: automake-1.9: command not found
-WARNING: `automake-1.9' is missing on your system.  You should only need it if
-         you modified `Makefile.am', `acinclude.m4' or `configure.ac'.
-         You might want to install the `Automake' and `Perl' packages.
-         Grab them from any GNU archive site.
-cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/Matrix/autotools/missing --run autoconf
-/bin/bash ./config.status --recheck
-running /bin/bash ./configure  --prefix=/home/travis/build/brichards64/tmp/build/CLHEP/install CXX=g++ --cache-file=/dev/null --srcdir=.  --no-create --no-recursion
-checking build system type... x86_64-unknown-linux-gnu
-checking host system type... x86_64-unknown-linux-gnu
-checking target system type... x86_64-unknown-linux-gnu
-checking for a BSD-compatible install... /usr/bin/install -c
-checking whether build environment is sane... yes
-checking for gawk... gawk
-checking whether make sets $(MAKE)... yes
-checking whether ln -s works... yes
-checking for ranlib... ranlib
-checking whether the C++ compiler works... yes
-checking for C++ compiler default output file name... a.out
-checking for suffix of executables... 
-checking whether we are cross compiling... no
-checking for suffix of object files... o
-checking whether we are using the GNU C++ compiler... yes
-checking whether g++ accepts -g... yes
-checking for style of include used by make... GNU
-checking dependency style of g++... gcc3
-checking how to run the C++ preprocessor... g++ -E
-checking for open in -lc -Wl,--as-needed... yes
-configure: creating ./config.status
- /bin/bash ./config.status
+ cd . && /bin/bash ./config.status Makefile 
 config.status: creating Makefile
-config.status: WARNING:  'Makefile.in' seems to ignore the --datarootdir setting
-config.status: creating Matrix/Makefile
-config.status: WARNING:  'Matrix/Makefile.in' seems to ignore the --datarootdir setting
-config.status: creating src/Makefile
-config.status: WARNING:  'src/Makefile.in' seems to ignore the --datarootdir setting
-config.status: creating test/Makefile
-config.status: WARNING:  'test/Makefile.in' seems to ignore the --datarootdir setting
-config.status: creating Matrix-deps
-config.status: creating Matrix/copy-header.pl
-config.status: creating Matrix-config
-config.status: creating test/testMatrix.sh
-config.status: creating test/testInversion.sh
-config.status: creating test/testBug6176.sh
-config.status: creating Matrix/defs.h
-config.status: executing depfiles commands
 make[1]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Matrix'
 make[1]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Matrix'
 Making all in Matrix
 make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Matrix/Matrix'
-cd .. && /bin/sh /home/travis/build/brichards64/tmp/build/CLHEP/Matrix/autotools/missing --run autoheader
-rm -f stamp-h1
-touch defs.h.in
-cd .. && /bin/sh ./config.status Matrix/defs.h
-config.status: creating Matrix/defs.h
+ cd .. && /bin/bash ./config.status Matrix/Makefile 
+config.status: creating Matrix/Makefile
+make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Matrix/Matrix'
+make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Matrix/Matrix'
 make  all-am
 make[3]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Matrix/Matrix'
 make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Matrix/Matrix'
@@ -1881,6 +1924,11 @@ make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Units
 make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Matrix'
 Making all in src
 make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Matrix/src'
+ cd .. && /bin/bash ./config.status src/Makefile depfiles
+config.status: creating src/Makefile
+config.status: executing depfiles commands
+make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Matrix/src'
+make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Matrix/src'
 if g++ -DHAVE_CONFIG_H -I. -I. -I../Matrix -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -MT DiagMatrix.o -MD -MP -MF ".deps/DiagMatrix.Tpo" -c -o DiagMatrix.o DiagMatrix.cc; \
 	then mv -f ".deps/DiagMatrix.Tpo" ".deps/DiagMatrix.Po"; else rm -f ".deps/DiagMatrix.Tpo"; exit 1; fi
 if g++ -DHAVE_CONFIG_H -I. -I. -I../Matrix -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -MT GenMatrix.o -MD -MP -MF ".deps/GenMatrix.Tpo" -c -o GenMatrix.o GenMatrix.cc; \
@@ -1916,21 +1964,76 @@ g++ -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2   -o libCLHEP-Matrix-2.1.0.1.s
 make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Matrix/src'
 Making all in test
 make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Matrix/test'
+ cd .. && /bin/bash ./config.status test/Makefile depfiles
+config.status: creating test/Makefile
+config.status: executing depfiles commands
+make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Matrix/test'
+make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Matrix/test'
 make[2]: Nothing to be done for `all'.
 make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Matrix/test'
 make[1]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Matrix'
 Making all in RandomObjects
 make[1]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects'
- cd . && /bin/bash ./config.status Makefile 
+cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects/autotools/missing --run aclocal-1.9 
+/home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects/autotools/missing: line 52: aclocal-1.9: command not found
+WARNING: `aclocal-1.9' is missing on your system.  You should only need it if
+         you modified `acinclude.m4' or `configure.ac'.  You might want
+         to install the `Automake' and `Perl' packages.  Grab them from
+         any GNU archive site.
+ cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects/autotools/missing --run automake-1.9 --foreign 
+/home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects/autotools/missing: line 52: automake-1.9: command not found
+WARNING: `automake-1.9' is missing on your system.  You should only need it if
+         you modified `Makefile.am', `acinclude.m4' or `configure.ac'.
+         You might want to install the `Automake' and `Perl' packages.
+         Grab them from any GNU archive site.
+cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects/autotools/missing --run autoconf
+/bin/bash ./config.status --recheck
+running /bin/bash ./configure  --prefix=/home/travis/build/brichards64/tmp/build/CLHEP/install CXX=g++ --cache-file=/dev/null --srcdir=.  --no-create --no-recursion
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking target system type... x86_64-unknown-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether ln -s works... yes
+checking for ranlib... ranlib
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking for style of include used by make... GNU
+checking dependency style of g++... gcc3
+checking how to run the C++ preprocessor... g++ -E
+checking for open in -lc -Wl,--as-needed... yes
+configure: creating ./config.status
+ /bin/bash ./config.status
 config.status: creating Makefile
+config.status: WARNING:  'Makefile.in' seems to ignore the --datarootdir setting
+config.status: creating RandomObjects/Makefile
+config.status: WARNING:  'RandomObjects/Makefile.in' seems to ignore the --datarootdir setting
+config.status: creating src/Makefile
+config.status: WARNING:  'src/Makefile.in' seems to ignore the --datarootdir setting
+config.status: creating test/Makefile
+config.status: WARNING:  'test/Makefile.in' seems to ignore the --datarootdir setting
+config.status: creating RandomObjects-deps
+config.status: creating RandomObjects/copy-header.pl
+config.status: creating RandomObjects-config
+config.status: creating test/testVectorDists.sh
+config.status: creating RandomObjects/defs.h
+config.status: executing depfiles commands
 make[1]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects'
 make[1]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects'
 Making all in RandomObjects
 make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects/RandomObjects'
- cd .. && /bin/bash ./config.status RandomObjects/Makefile 
-config.status: creating RandomObjects/Makefile
-make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects/RandomObjects'
-make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects/RandomObjects'
+cd .. && /bin/sh /home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects/autotools/missing --run autoheader
+rm -f stamp-h1
+touch defs.h.in
+cd .. && /bin/sh ./config.status RandomObjects/defs.h
+config.status: creating RandomObjects/defs.h
 make  all-am
 make[3]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects/RandomObjects'
 make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects/RandomObjects'
@@ -2076,11 +2179,6 @@ make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Units
 make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects'
 Making all in src
 make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects/src'
- cd .. && /bin/bash ./config.status src/Makefile depfiles
-config.status: creating src/Makefile
-config.status: executing depfiles commands
-make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects/src'
-make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects/src'
 if g++ -DHAVE_CONFIG_H -I. -I. -I../RandomObjects -I.. -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -MT RandMultiGauss.o -MD -MP -MF ".deps/RandMultiGauss.Tpo" -c -o RandMultiGauss.o RandMultiGauss.cc; \
 	then mv -f ".deps/RandMultiGauss.Tpo" ".deps/RandMultiGauss.Po"; else rm -f ".deps/RandMultiGauss.Tpo"; exit 1; fi
 if g++ -DHAVE_CONFIG_H -I. -I. -I../RandomObjects -I.. -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -MT RandomVector.o -MD -MP -MF ".deps/RandomVector.Tpo" -c -o RandomVector.o RandomVector.cc; \
@@ -2094,11 +2192,6 @@ g++ -DHAVE_CONFIG_H -I. -I. -I../RandomObjects -I.. -I..   -O -ansi -pedantic -W
 g++ -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2   -o libCLHEP-RandomObjects-2.1.0.1.so -shared -Wl,--no-undefined -Wl,--as-needed -Wl,-soname,libCLHEP-RandomObjects-2.1.0.1.so shared/RandMultiGauss.o shared/RandomVector.o -L../../Random/src -lCLHEP-Random-2.1.0.1 -L../../Matrix/src -lCLHEP-Matrix-2.1.0.1 -L../../Vector/src -lCLHEP-Vector-2.1.0.1
 make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects/src'
 Making all in test
-make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects/test'
- cd .. && /bin/bash ./config.status test/Makefile depfiles
-config.status: creating test/Makefile
-config.status: executing depfiles commands
-make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects/test'
 make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects/test'
 make[2]: Nothing to be done for `all'.
 make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RandomObjects/test'
@@ -2164,6 +2257,7 @@ cd .. && /bin/sh ./config.status Cast/defs.h
 config.status: creating Cast/defs.h
 make  all-am
 make[3]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Cast/Cast'
+make[3]: Nothing to be done for `all-am'.
 make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Cast/Cast'
 make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Cast/Cast'
 Making all in .
@@ -2189,72 +2283,19 @@ make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Cast/
 make[1]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Cast'
 Making all in RefCount
 make[1]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount'
- cd . && /bin/bash ./config.status Makefile 
-config.status: creating Makefile
-make[1]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount'
-make[1]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount'
-Making all in RefCount
-make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/RefCount'
- cd .. && /bin/bash ./config.status RefCount/Makefile 
-config.status: creating RefCount/Makefile
-make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/RefCount'
-make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/RefCount'
-make  all-am
-make[3]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/RefCount'
-make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/RefCount'
-make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/RefCount'
-Making all in .
-make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount'
-/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/autotools/install-sh -d /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/CLHEP;
-make[3]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/RefCount'
- install headers in /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/CLHEP/RefCount 
-cp -p ZMhandleTo.h /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/CLHEP/RefCount/ZMhandleTo.h
-cp -p ZMhandleTo.icc /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/CLHEP/RefCount/ZMhandleTo.icc
-cp -p ZMuseCount.h /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/CLHEP/RefCount/ZMuseCount.h
-cp -p ZMuseCount.icc /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/CLHEP/RefCount/ZMuseCount.icc
-cp -p defs.h /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/CLHEP/RefCount/defs.h
-make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/RefCount'
-make[3]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Cast/Cast'
- install headers in /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/CLHEP/Cast 
-cp -p itos.h /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/CLHEP/Cast/itos.h
-cp -p defs.h /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/CLHEP/Cast/defs.h
-make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Cast/Cast'
-make[3]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/RefCount'
- install headers in /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/CLHEP/RefCount 
-make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/RefCount'
-make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount'
-Making all in src
-make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/src'
- cd .. && /bin/bash ./config.status src/Makefile depfiles
-config.status: creating src/Makefile
-config.status: executing depfiles commands
-make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/src'
-make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/src'
-if g++ -DHAVE_CONFIG_H -I. -I. -I../RefCount -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -MT ZMuseCount.o -MD -MP -MF ".deps/ZMuseCount.Tpo" -c -o ZMuseCount.o ZMuseCount.cc; \
-	then mv -f ".deps/ZMuseCount.Tpo" ".deps/ZMuseCount.Po"; else rm -f ".deps/ZMuseCount.Tpo"; exit 1; fi
-rm -f libCLHEP-RefCount-2.1.0.1.a
-ar cru libCLHEP-RefCount-2.1.0.1.a ZMuseCount.o 
-ranlib libCLHEP-RefCount-2.1.0.1.a
-test -d shared || mkdir shared
-g++ -DHAVE_CONFIG_H -I. -I. -I../RefCount -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -fPIC -DPIC -c -o shared/ZMuseCount.o ZMuseCount.cc
-g++ -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2   -o libCLHEP-RefCount-2.1.0.1.so -shared -Wl,--no-undefined -Wl,--as-needed -Wl,-soname,libCLHEP-RefCount-2.1.0.1.so shared/ZMuseCount.o -L../../Cast/src -lCLHEP-Cast-2.1.0.1
-make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/src'
-make[1]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount'
-Making all in Exceptions
-make[1]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Exceptions'
-cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/Exceptions/autotools/missing --run aclocal-1.9 
-/home/travis/build/brichards64/tmp/build/CLHEP/Exceptions/autotools/missing: line 52: aclocal-1.9: command not found
+cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/autotools/missing --run aclocal-1.9 
+/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/autotools/missing: line 52: aclocal-1.9: command not found
 WARNING: `aclocal-1.9' is missing on your system.  You should only need it if
          you modified `acinclude.m4' or `configure.ac'.  You might want
          to install the `Automake' and `Perl' packages.  Grab them from
          any GNU archive site.
- cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/Exceptions/autotools/missing --run automake-1.9 --foreign 
-/home/travis/build/brichards64/tmp/build/CLHEP/Exceptions/autotools/missing: line 52: automake-1.9: command not found
+ cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/autotools/missing --run automake-1.9 --foreign 
+/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/autotools/missing: line 52: automake-1.9: command not found
 WARNING: `automake-1.9' is missing on your system.  You should only need it if
          you modified `Makefile.am', `acinclude.m4' or `configure.ac'.
          You might want to install the `Automake' and `Perl' packages.
          Grab them from any GNU archive site.
-cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/Exceptions/autotools/missing --run autoconf
+cd . && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/autotools/missing --run autoconf
 /bin/bash ./config.status --recheck
 running /bin/bash ./configure  --prefix=/home/travis/build/brichards64/tmp/build/CLHEP/install CXX=g++ --cache-file=/dev/null --srcdir=.  --no-create --no-recursion
 checking build system type... x86_64-unknown-linux-gnu
@@ -2281,36 +2322,77 @@ configure: creating ./config.status
  /bin/bash ./config.status
 config.status: creating Makefile
 config.status: WARNING:  'Makefile.in' seems to ignore the --datarootdir setting
-config.status: creating Exceptions/Makefile
-config.status: WARNING:  'Exceptions/Makefile.in' seems to ignore the --datarootdir setting
+config.status: creating RefCount/Makefile
+config.status: WARNING:  'RefCount/Makefile.in' seems to ignore the --datarootdir setting
 config.status: creating src/Makefile
 config.status: WARNING:  'src/Makefile.in' seems to ignore the --datarootdir setting
-config.status: creating test/Makefile
-config.status: WARNING:  'test/Makefile.in' seems to ignore the --datarootdir setting
-config.status: creating doc/Makefile
-config.status: WARNING:  'doc/Makefile.in' seems to ignore the --datarootdir setting
-config.status: creating Exceptions-deps
-config.status: creating Exceptions/copy-header.pl
-config.status: creating Exceptions-config
-config.status: creating test/testExceptions.sh
-config.status: creating test/testzmex.sh
-config.status: creating test/testThrowFrom.sh
-config.status: creating test/exctest1.sh
-config.status: creating test/exctest2.sh
-config.status: creating test/exctest3.sh
-config.status: creating test/exctest4.sh
-config.status: creating test/exctestNothrow.sh
-config.status: creating test/excDblThrow.sh
-config.status: creating Exceptions/defs.h
+config.status: creating RefCount-deps
+config.status: creating RefCount/copy-header.pl
+config.status: creating RefCount-config
+config.status: creating RefCount/defs.h
 config.status: executing depfiles commands
+make[1]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount'
+make[1]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount'
+Making all in RefCount
+make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/RefCount'
+cd .. && /bin/sh /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/autotools/missing --run autoheader
+rm -f stamp-h1
+touch defs.h.in
+cd .. && /bin/sh ./config.status RefCount/defs.h
+config.status: creating RefCount/defs.h
+make  all-am
+make[3]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/RefCount'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/RefCount'
+make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/RefCount'
+Making all in .
+make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount'
+/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/autotools/install-sh -d /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/CLHEP;
+make[3]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/RefCount'
+ install headers in /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/CLHEP/RefCount 
+cp -p ZMhandleTo.h /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/CLHEP/RefCount/ZMhandleTo.h
+cp -p ZMhandleTo.icc /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/CLHEP/RefCount/ZMhandleTo.icc
+cp -p ZMuseCount.h /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/CLHEP/RefCount/ZMuseCount.h
+cp -p ZMuseCount.icc /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/CLHEP/RefCount/ZMuseCount.icc
+cp -p defs.h /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/CLHEP/RefCount/defs.h
+make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/RefCount'
+make[3]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Cast/Cast'
+ install headers in /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/CLHEP/Cast 
+cp -p itos.h /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/CLHEP/Cast/itos.h
+cp -p defs.h /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/CLHEP/Cast/defs.h
+make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Cast/Cast'
+make[3]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/RefCount'
+ install headers in /home/travis/build/brichards64/tmp/build/CLHEP/RefCount/CLHEP/RefCount 
+make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/RefCount'
+make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount'
+Making all in src
+make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/src'
+if g++ -DHAVE_CONFIG_H -I. -I. -I../RefCount -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -MT ZMuseCount.o -MD -MP -MF ".deps/ZMuseCount.Tpo" -c -o ZMuseCount.o ZMuseCount.cc; \
+	then mv -f ".deps/ZMuseCount.Tpo" ".deps/ZMuseCount.Po"; else rm -f ".deps/ZMuseCount.Tpo"; exit 1; fi
+rm -f libCLHEP-RefCount-2.1.0.1.a
+ar cru libCLHEP-RefCount-2.1.0.1.a ZMuseCount.o 
+ranlib libCLHEP-RefCount-2.1.0.1.a
+test -d shared || mkdir shared
+g++ -DHAVE_CONFIG_H -I. -I. -I../RefCount -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -fPIC -DPIC -c -o shared/ZMuseCount.o ZMuseCount.cc
+g++ -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2   -o libCLHEP-RefCount-2.1.0.1.so -shared -Wl,--no-undefined -Wl,--as-needed -Wl,-soname,libCLHEP-RefCount-2.1.0.1.so shared/ZMuseCount.o -L../../Cast/src -lCLHEP-Cast-2.1.0.1
+make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount/src'
+make[1]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/RefCount'
+Making all in Exceptions
+make[1]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Exceptions'
+ cd . && /bin/bash ./config.status Makefile 
+config.status: creating Makefile
 make[1]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Exceptions'
 make[1]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Exceptions'
 Making all in Exceptions
 make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Exceptions/Exceptions'
-cd .. && /bin/sh /home/travis/build/brichards64/tmp/build/CLHEP/Exceptions/autotools/missing --run autoheader
+ cd .. && /bin/bash ./config.status Exceptions/Makefile 
+config.status: creating Exceptions/Makefile
+make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Exceptions/Exceptions'
+make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Exceptions/Exceptions'
+cd .. && /bin/bash /home/travis/build/brichards64/tmp/build/CLHEP/Exceptions/autotools/missing --run autoheader
 rm -f stamp-h1
 touch defs.h.in
-cd .. && /bin/sh ./config.status Exceptions/defs.h
+cd .. && /bin/bash ./config.status Exceptions/defs.h
 config.status: creating Exceptions/defs.h
 make  all-am
 make[3]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Exceptions/Exceptions'
@@ -2354,6 +2436,11 @@ make[3]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Cast/
 make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Exceptions'
 Making all in src
 make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Exceptions/src'
+ cd .. && /bin/bash ./config.status src/Makefile depfiles
+config.status: creating src/Makefile
+config.status: executing depfiles commands
+make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Exceptions/src'
+make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Exceptions/src'
 if g++ -DHAVE_CONFIG_H -I. -I. -I../Exceptions -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -MT ZMerrno.o -MD -MP -MF ".deps/ZMerrno.Tpo" -c -o ZMerrno.o ZMerrno.cc; \
 	then mv -f ".deps/ZMerrno.Tpo" ".deps/ZMerrno.Po"; else rm -f ".deps/ZMerrno.Tpo"; exit 1; fi
 if g++ -DHAVE_CONFIG_H -I. -I. -I../Exceptions -I..   -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2 -MT ZMexClassInfo.o -MD -MP -MF ".deps/ZMexClassInfo.Tpo" -c -o ZMexClassInfo.o ZMexClassInfo.cc; \
@@ -2382,6 +2469,11 @@ g++ -DHAVE_CONFIG_H -I. -I. -I../Exceptions -I..   -O -ansi -pedantic -Wall -D_G
 g++ -O -ansi -pedantic -Wall -D_GNU_SOURCE -g -O2   -o libCLHEP-Exceptions-2.1.0.1.so -shared -Wl,--no-undefined -Wl,--as-needed -Wl,-soname,libCLHEP-Exceptions-2.1.0.1.so shared/ZMerrno.o shared/ZMexClassInfo.o shared/ZMexHandler.o shared/ZMexLogger.o shared/ZMexSeverity.o shared/ZMexception.o shared/ZMthrow.o -L../../Cast/src -lCLHEP-Cast-2.1.0.1 -L../../RefCount/src -lCLHEP-RefCount-2.1.0.1
 make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Exceptions/src'
 Making all in test
+make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Exceptions/test'
+ cd .. && /bin/bash ./config.status test/Makefile depfiles
+config.status: creating test/Makefile
+config.status: executing depfiles commands
+make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Exceptions/test'
 make[2]: Entering directory `/home/travis/build/brichards64/tmp/build/CLHEP/Exceptions/test'
 make[2]: Nothing to be done for `all'.
 make[2]: Leaving directory `/home/travis/build/brichards64/tmp/build/CLHEP/Exceptions/test'
