@@ -28,7 +28,7 @@ cd ./WCSim
 #git checkout develop
 source ../hk-hyperk/Source_At_Start.sh
 make clean > "../hk-hyperk/log/wcsim-build.log" 2>&1
-make rootcint > "../hk-hyperk/log/wcsim-build.log" 2>&1
+make rootcint >> "../hk-hyperk/log/wcsim-build.log" 2>>&1
 make
 fi
 
