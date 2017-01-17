@@ -39,13 +39,8 @@ public:
   
   virtual ~WCSimWCTriggerBase();
 
-  /**
-   * \brief The main user-callable routine of the class. Gets the input & creates the output WCSimWCTriggeredDigitsCollection's, then calls DoTheWork()
-   *
-   * The virtual keyword for this method is DEPRECATED
-   * It is only defined virtual now because it is overridden in the old class (WCSimWCDigitizer)
-   */
-  virtual void Digitize();
+  ///The main user-callable routine of the class. Gets the input & creates the output WCSimWCTriggeredDigitsCollection's, then calls DoTheWork()
+  void Digitize();
 
   ///Returns the number of trigger gates in the event (i.e. the number of triggers passed)
   int NumberOfGatesInThisEvent() { return TriggerTimes.size(); }
@@ -87,10 +82,6 @@ public:
   
   ///Knowledge of the dark rate (use for automatically adjusting for noise)
   void SetDarkRate(double idarkrate){ PMTDarkRate = idarkrate; }
-
-  ///DEPRECATED function used in old class (WCSimWCDigitizer), and called in WCSimEventAction
-  virtual void SetPMTSize(G4float /*inputSize*/) {};
-
 
 
 protected:
@@ -178,6 +169,27 @@ private:
 
   ///takes all trigger times, then loops over all Digits & fills the output DigitsCollection
   void FillDigitsCollection(WCSimWCDigitsCollection* WCDCPMT, bool remove_hits, TriggerType_t save_triggerType);
+
+  ///sort the Trigger vectors (Time, Type, Info) by Trigger Time
+  void SortTriggersByTime() {
+    int i, j;
+    TriggerType_t index_type;
+    float index_time;
+    std::vector<float> index_info;
+    for (i = 1; i < (int) TriggerTimes.size(); ++i) {
+      index_time = TriggerTimes[i];
+      index_type = TriggerTypes[i];
+      index_info = TriggerInfos[i];
+      for (j = i; j > 0 && TriggerTimes[j-1] > index_time; j--) {
+	TriggerTimes[j] = TriggerTimes[j-1];
+	TriggerTypes[j] = TriggerTypes[j-1];
+	TriggerInfos[j] = TriggerInfos[j-1];
+      }//j
+      TriggerTimes[j] = index_time;
+      TriggerTypes[j] = index_type;
+      TriggerInfos[j] = index_info;
+    }//i
+  }
   
   static const double offset;        ///< Hit time offset (ns)
   static const double LongTime;      ///< An arbitrary long time to use in loops (ns)
