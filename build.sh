@@ -18,21 +18,35 @@ then
     cmake -DCMAKE_INSTALL_PREFIX= ../source/2.2.0.4/CLHEP  > ../../../clhep-build.log 2>&1
     make >> ../../../clhep-build.log 2>&1
     make install >> ../../../clhep-build.log 2>&1
-
+    echo location 1
+    echo `pwd`
+    
     cd ../..
     git clone https://github.com/hyperk/Geant4.git Geant4
     cd Geant4
     mkdir build
     cd build
-    cmake -DGEANT4_INSTALL_DATA=ON -DGEANT4_INSTALL_DATADIR=./Data -DCMAKE_INSTALL_PREFIX=./install -DCLHEP_VERSION_OK=${CLHEP_VERSION} -DCLHEP_LIBRARIES= ./lib -DCLHEP_INCLUDE_DIRS= ./include ../source/4.10.01.p02/ > ../../../geant4-build.log 2>&1
-    make >> ../../../geant4-build.log 2>&1
-    make install >> ../../../geant4-build.log 2>&1
-
+#    cmake -DGEANT4_INSTALL_DATA=ON -DGEANT4_INSTALL_DATADIR=./Data -DCMAKE_INSTALL_PREFIX=./install -DCLHEP_VERSION_OK=${CLHEP_VERSION} -DCLHEP_LIBRARIES= ./lib -DCLHEP_INCLUDE_DIRS= ./include ../source/4.10.01.p02/ > ../../../geant4-build.log 2>&1
+ #   make >> ../../../geant4-build.log 2>&1
+  #  make install >> ../../../geant4-build.log 2>&1
+    echo location 2
+    echo `pwd`
+    
     cd ../..
     git clone http://root.cern.ch/git/root.git root
     cd root
-    ./configure --disable-std-c++11 --enable-python --enable-roofit --enable-minuit2 > ../../root-build.log 2>&1
-    make >> ../..//root-build.log 2>&1
+    ./configure --disable-cxx11  --enable-python --enable-roofit --enable-minuit2 > ../../root-build.log 2>&1
+    make >> ../../root-build.log 2>&1
+    source bin/thisroot.sh
+    echo location 3
+    echo `pwd`
+    
+    cd ../WCSim
+    make clean
+    make rootcint > ../../wcsim-build.log 2>&1
+    make > ../../wcsim-build.log 2>&1
+
+>>>>>>> b38db18b9e17c3fbab90a9a2a275b19fa1463b2c
     
 #git clone https://github.com/hyperk/hk-hyperk.git
 #cd hk-hyperk
