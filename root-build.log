@@ -1,9 +1,4 @@
-****************************************************************************************************************
-*  The classic configure/make method of building ROOT is now DEPRECATED in favor of the CMake one.             *
-*  Refer to README/INSTALL file for updated instructions or visit the page https://root.cern.ch/building-root  *
-****************************************************************************************************************
-Checking for source directory ... /home/travis/build/brichards64/tmp/build/root
-Invalid architecture. Try ./configure --help
+./build.sh: line 40: ./configure: Permission denied
 Makefile:20: config/Makefile.config: No such file or directory
 Makefile:49: config/Makefile.comp: No such file or directory
 Makefile:60: *** Please run ./configure first.  Stop.
