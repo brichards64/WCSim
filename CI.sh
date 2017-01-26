@@ -5,7 +5,6 @@
 # Continuous integration script for TraviCI build. The script is run by the .travis.yml with arguments (normal/references/dependancies) which produce normal output, recache reference data if new tests are added or recache dependancies and reference data.
 # The script checks out build tools from HyperK and create enviroment for testing and updates github webpage with output.
 
-
 ############################## Setting up git credentials #######################
 
 git config --global credential.helper store 
@@ -16,6 +15,7 @@ git config --global push.default matching
 
 #################################################################################
 
+echo `gcc --version`
 ######### Creating firectory structure and downloading build tools ##############
 
 echo `pwd`
