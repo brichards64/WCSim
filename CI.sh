@@ -49,16 +49,16 @@ echo PID test $PID
 #rm -rf /home/travis/reference
 #fi
 
-#if [ $1 != "dependancies" ]
-#then
-#mv /home/travis/CLHEP ./build/
-#mv /home/travis/Geant4 ./build/
-#mv /home/travis/root ./build/
-#else
-#rm -rf /home/travis/CLHEP 
-#rm -rf /home/travis/Geant4 
-#rm -rf /home/travis/root 
-#fi
+if [ $1 != "dependancies" ]
+then
+mv /home/travis/CLHEP ./build/
+mv /home/travis/Geant4 ./build/
+mv /home/travis/root ./build/
+else
+rm -rf /home/travis/CLHEP 
+rm -rf /home/travis/Geant4 
+rm -rf /home/travis/root 
+fi
 
 #################################################################################
 
@@ -111,9 +111,9 @@ git push > /dev/null 2>/dev/null
 #mv ./reference  /home/travis/
 #mv ./build/hk-hyperk /home/travis/
 #mv ./build/hk-config /home/travis/
-#mv ./build/CLHEP /home/travis/
-#mv ./build/Geant4 /home/travis/
-#mv ./build/root /home/travis/
+mv ./build/CLHEP /home/travis/
+mv ./build/Geant4 /home/travis/
+mv ./build/root /home/travis/
 
 
 
