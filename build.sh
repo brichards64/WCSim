@@ -31,7 +31,7 @@ then
     cd ../..
     git clone http://root.cern.ch/git/root.git root
     cd root
-    ./configure --disable-cxx11 --enable-python --enable-roofit --enable-minuit2 > ../../root-build.log 2>&1
+    ./configure --disable-std-c++11 --enable-python --enable-roofit --enable-minuit2 > ../../root-build.log 2>&1
     make >> ../..//root-build.log 2>&1
     
 #git clone https://github.com/hyperk/hk-hyperk.git
