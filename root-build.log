@@ -3,8 +3,7 @@
 *  Refer to README/INSTALL file for updated instructions or visit the page https://root.cern.ch/building-root  *
 ****************************************************************************************************************
 Checking for source directory ... /home/travis/build/brichards64/tmp/build/root
-Configuring for linuxx8664gcc
-Invalid option '--disable-std-cxx11'. Try ./configure --help
+Invalid architecture. Try ./configure --help
 Makefile:20: config/Makefile.config: No such file or directory
 Makefile:49: config/Makefile.comp: No such file or directory
 Makefile:60: *** Please run ./configure first.  Stop.
