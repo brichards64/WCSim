@@ -23,6 +23,8 @@ cd ..
 mkdir build
 
 mv WCSim build/
+echo here ben
+echo $GITHUB_API_KEY
 
 git clone -b gh-pages --single-branch https://brichards64:$GITHUB_API_KEY@github.com/brichards64/WCSim.git tmp #> /dev/null 2>/dev/null
 
