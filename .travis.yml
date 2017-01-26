@@ -21,8 +21,6 @@ install: true
 cache:
   directories:
     - /home/travis/reference
-    - /home/travis/hk-hyperk
-    - /home/travis/hk-config
     - /home/travis/CLHEP
     - /home/travis/Geant4
     - /home/travis/root

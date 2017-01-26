@@ -42,51 +42,47 @@ echo PID test $PID
 
 ############################## Transfer cached reference output #################
 
-if [ $1 = "normal" ]
-then
-mv /home/travis/reference ./
-else
-rm -rf /home/travis/reference
-fi
+#if [ $1 = "normal" ]
+#then
+#mv /home/travis/reference ./
+#else
+#rm -rf /home/travis/reference
+#fi
 
-if [ $1 != "dependancies" ]
-then
-mv /home/travis/hk-hyperk ./build/
-mv /home/travis/hk-config ./build/
-mv /home/travis/CLHEP ./build/
-mv /home/travis/Geant4 ./build/
-mv /home/travis/root ./build/
-else
-rm -rf /home/travis/hk-hyperk 
-rm -rf /home/travis/hk-config 
-rm -rf /home/travis/CLHEP 
-rm -rf /home/travis/Geant4 
-rm -rf /home/travis/root 
-fi
+#if [ $1 != "dependancies" ]
+#then
+#mv /home/travis/CLHEP ./build/
+#mv /home/travis/Geant4 ./build/
+#mv /home/travis/root ./build/
+#else
+#rm -rf /home/travis/CLHEP 
+#rm -rf /home/travis/Geant4 
+#rm -rf /home/travis/root 
+#fi
 
 #################################################################################
 
 
 ########################### Start build and run ################################# 
 
-if [ $1 != "normal" ]
-then
-mkdir reference
-fi
+#if [ $1 != "normal" ]
+#then
+#mkdir reference
+#fi
 
-mkdir output
+#mkdir output
 
 ./build.sh $1
-./runsim.sh
+#./runsim.sh
 
-if [ $1 != "normal" ]
-then
-cp output/* reference/
-fi
+#if [ $1 != "normal" ]
+#then
+#cp output/* reference/
+#fi
 
-./build/hk-hyperk/Source_At_Start.sh
-./newmakewebpage.sh 
-exitstatus=$?
+#./build/hk-hyperk/Source_At_Start.sh
+#./newmakewebpage.sh 
+#exitstatus=$?
 
 #################################################################################
 
@@ -102,22 +98,22 @@ git commit -a -m $TRAVIS_COMMIT
 
 git push > /dev/null 2>/dev/null
 
-#https://brichards64:$GITHUB_API_KEY@github.com/brichards64/brichards64.github.io.git > /dev/null 2>/dev/null
+##https://brichards64:$GITHUB_API_KEY@github.com/brichards64/brichards64.github.io.git > /dev/null 2>/dev/null
 
 #################################################################################
 
 
-if [ $1 != "normal" ]
-then
-cp output/* reference/
-fi
+#if [ $1 != "normal" ]
+#then
+#cp output/* reference/
+#fi
 
-mv ./reference  /home/travis/
-mv ./build/hk-hyperk /home/travis/
-mv ./build/hk-config /home/travis/
-mv ./build/CLHEP /home/travis/
-mv ./build/Geant4 /home/travis/
-mv ./build/root /home/travis/
+#mv ./reference  /home/travis/
+#mv ./build/hk-hyperk /home/travis/
+#mv ./build/hk-config /home/travis/
+#mv ./build/CLHEP /home/travis/
+#mv ./build/Geant4 /home/travis/
+#mv ./build/root /home/travis/
 
 
 
