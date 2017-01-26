@@ -4,6 +4,7 @@
 ****************************************************************************************************************
 Checking for source directory ... /home/travis/build/brichards64/tmp/build/root
 Configuring for linuxx8664gcc
+WARNING: option --disable-cxx11 is deprecated and ignored!
 INFO: --enable-python: already enabled by default.
 Checking for GNU Make version >= 3.80 ... ok
 Checking for C compiler ... gcc
