@@ -89,6 +89,8 @@ fi
 
 ################################### Push results to webpage #####################
 
+more *.log
+
 git add -A
 git reset -- build/*
 git reset -- reference/*
