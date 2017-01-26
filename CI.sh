@@ -23,8 +23,6 @@ cd ..
 mkdir build
 
 mv WCSim build/
-echo here ben
-echo $GITHUB_API_KEY
 
 git clone -b gh-pages --single-branch https://brichards64:$GITHUB_API_KEY@github.com/brichards64/WCSim.git tmp #> /dev/null 2>/dev/null
 
@@ -74,8 +72,7 @@ echo PID test $PID
 
 #mkdir output
 
-echo hello > clhep-build.log
-#./build.sh $1
+./build.sh $1
 #./runsim.sh
 
 #if [ $1 != "normal" ]
@@ -99,8 +96,7 @@ git reset -- output/*
 
 git commit -a -m $TRAVIS_COMMIT
 
-git push
-#> /dev/null 2>/dev/null
+git push > /dev/null 2>/dev/null
 
 ##https://brichards64:$GITHUB_API_KEY@github.com/brichards64/brichards64.github.io.git > /dev/null 2>/dev/null
 
