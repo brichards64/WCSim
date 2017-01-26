@@ -35,9 +35,10 @@ then
     cd ../..
     git clone http://root.cern.ch/git/root.git root
     cd root
-    cat ./configure | sed s:'enable_cxx11=yes':'enable_cxx11=no': >configurex
+    cat ./configure | sed s:'enable_cxx11=yes':'enable_cxx11=no': > configurex
     mv configurex configure
-    ./configure --disable-cxx11  --enable-python --enable-roofit --enable-minuit2 > ../../root-build.log 2>&1
+    chmod a+x configure
+    ./configure  --enable-python --enable-roofit --enable-minuit2 > ../../root-build.log 2>&1
     make >> ../../root-build.log 2>&1
     source bin/thisroot.sh
     echo location 3
