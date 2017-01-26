@@ -35,7 +35,7 @@ then
     cd ../..
     git clone http://root.cern.ch/git/root.git root
     cd root
-    ./configure  --enable-python --enable-roofit --enable-minuit2 > ../../root-build.log 2>&1
+    ./configure --disable-cxx11  --enable-python --enable-roofit --enable-minuit2 > ../../root-build.log 2>&1
     make >> ../../root-build.log 2>&1
     source bin/thisroot.sh
     echo location 3
