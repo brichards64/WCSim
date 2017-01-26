@@ -4,16 +4,7 @@
 ****************************************************************************************************************
 Checking for source directory ... /home/travis/build/brichards64/tmp/build/root
 Configuring for linuxx8664gcc
-WARNING: option --disable-cxx11 is deprecated and ignored!
-INFO: --enable-python: already enabled by default.
-Checking for GNU Make version >= 3.80 ... ok
-Checking for C compiler ... gcc
-Checking for C++ compiler ... g++
-Checking for linker (LD) ... g++
-Checking for F77 compiler ... no F77 compiler gfortran found
-Checking whether compiler can generate dependencies ... yes
-Checking whether c++11 mode is supported ... no
-configure: c++11 mode is requested but the current compiler does not support it.
+Invalid option '--disable-std-cxx11'. Try ./configure --help
 Makefile:20: config/Makefile.config: No such file or directory
 Makefile:49: config/Makefile.comp: No such file or directory
 Makefile:60: *** Please run ./configure first.  Stop.
