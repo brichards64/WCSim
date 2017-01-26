@@ -46,7 +46,6 @@ then
     make rootcint > ../../wcsim-build.log 2>&1
     make > ../../wcsim-build.log 2>&1
 
->>>>>>> b38db18b9e17c3fbab90a9a2a275b19fa1463b2c
     
 #git clone https://github.com/hyperk/hk-hyperk.git
 #cd hk-hyperk
