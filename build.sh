@@ -11,11 +11,34 @@
 cd build
 if [ $1 = "dependancies" ]
 then
-git clone https://github.com/hyperk/hk-hyperk.git
-cd hk-hyperk
-echo '2'|./get_release.sh
-source Source_At_Start.sh
-./build.sh build
+    git clone https://github.com/hyperk/CLHEP.git CLHEP
+    cd CLHEP/
+    mkdir build
+    cd build
+    cmake -DCMAKE_INSTALL_PREFIX= ../source/2.2.0.4/CLHEP  > ../../../clhep-build.log 2>&1
+    make >> ../../../clhep-build.log 2>&1
+    make install >> ../../../clhep-build.log 2>&1
+
+    cd ../..
+    git clone https://github.com/hyperk/Geant4.git Geant4
+    cd Geant4
+    mkdir build
+    cd build
+    cmake -DGEANT4_INSTALL_DATA=ON -DGEANT4_INSTALL_DATADIR=./Data -DCMAKE_INSTALL_PREFIX=./install -DCLHEP_VERSION_OK=${CLHEP_VERSION} -DCLHEP_LIBRARIES= ./lib -DCLHEP_INCLUDE_DIRS= ./include ../source/4.10.01.p02/ > ../../../geant4-build.log 2>&1
+    make >> ../../../geant4-build.log 2>&1
+    make install >> ../../../geant4-build.log 2>&1
+
+    cd ../..
+    git clone http://root.cern.ch/git/root.git root
+    cd root
+    ./configure --disable-cxx11 --enable-python --enable-roofit --enable-minuit2 > ../../root-build.log 2>&1
+    make >> ../..//root-build.log 2>&1
+    
+#git clone https://github.com/hyperk/hk-hyperk.git
+#cd hk-hyperk
+#echo '2'|./get_release.sh
+#source Source_At_Start.sh
+#./build.sh build
 fi
 
 #######################################################################
