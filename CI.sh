@@ -72,7 +72,8 @@ echo PID test $PID
 
 #mkdir output
 
-./build.sh $1
+echo hello > clhep-build.log
+#./build.sh $1
 #./runsim.sh
 
 #if [ $1 != "normal" ]
