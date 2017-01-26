@@ -32,7 +32,13 @@ then
     git clone http://root.cern.ch/git/root.git root
     cd root
     ./configure --disable-cxx11 --enable-python --enable-roofit --enable-minuit2 > ../../root-build.log 2>&1
-    make >> ../..//root-build.log 2>&1
+    make >> ../../root-build.log 2>&1
+
+    cd ../WCSim
+    make clean
+    make rootcint > ../../wcsim-build.log 2>&1
+    make > ../../wcsim-build.log 2>&1
+
     
 #git clone https://github.com/hyperk/hk-hyperk.git
 #cd hk-hyperk
