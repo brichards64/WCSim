@@ -16,7 +16,7 @@ then
     mkdir build
     cd build
     cmake -DCMAKE_INSTALL_PREFIX= ../source/2.2.0.4/CLHEP  > ../../../clhep-build.log 2>&1
-    make >> ../../../clhep-build.log 2>&1
+    make -j8 >> ../../../clhep-build.log 2>&1
     make install >> ../../../clhep-build.log 2>&1
     echo location 1
     echo `pwd`
@@ -39,7 +39,7 @@ then
     mv configurex configure
     chmod a+x configure
     ./configure  --enable-python --enable-roofit --enable-minuit2 > ../../root-build.log 2>&1
-    make >> ../../root-build.log 2>&1
+    make -j8 >> ../../root-build.log 2>&1
     source bin/thisroot.sh
     echo location 3
     echo `pwd`
