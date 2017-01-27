@@ -38,9 +38,11 @@ then
     cat ./configure | sed s:'enable_cxx11=yes':'enable_cxx11=no': > configurex
     mv configurex configure
     chmod a+x configure
+    echo starting configure
     ./configure  --enable-python --enable-roofit --enable-minuit2 > ../../root-build.log 2>&1
-    make -j8 >> ../../root-build.log 2>&1
-    source bin/thisroot.sh
+    echo starting make
+    make -j8 
+    #>> ../../root-build.log 2>&1
     echo location 3
     echo `pwd`
     
