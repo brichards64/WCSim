@@ -48,8 +48,8 @@ then
     
     cd ../WCSim
     make clean
-    make rootcint > ../../wcsim-build.log 2>&1
-    make > ../../wcsim-build.log 2>&1
+    make rootcint -j8 > ../../wcsim-build.log 2>&1
+    make -j8 > ../../wcsim-build.log 2>&1
 
     
 #git clone https://github.com/hyperk/hk-hyperk.git
@@ -69,8 +69,8 @@ cd ./WCSim
 #git checkout develop
 source ../hk-hyperk/Source_At_Start.sh
 make clean > "../hk-hyperk/log/wcsim-build.log" 2>&1
-make rootcint >> "../hk-hyperk/log/wcsim-build.log" 2>&1
-make
+make rootcint -j8 >> "../hk-hyperk/log/wcsim-build.log" 2>&1
+make -j8
 fi
 
 #######################################################################
