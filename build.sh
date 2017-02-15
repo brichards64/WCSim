@@ -16,7 +16,7 @@ then
     mkdir build
     cd build
     cmake -DCMAKE_INSTALL_PREFIX= ../source/2.2.0.4/CLHEP  > ../../../clhep-build.log 2>&1
-    make >> ../../../clhep-build.log 2>&1
+    make -j8 >> ../../../clhep-build.log 2>&1
     make install >> ../../../clhep-build.log 2>&1
     echo location 1
     echo `pwd`
@@ -42,19 +42,25 @@ then
     cd ../..
     git clone http://root.cern.ch/git/root.git root
     cd root
-    cat ./configure | sed s:'enable_cxx11=yes':'enable_cxx11=no': > configurex
-    mv configurex configure
-    chmod a+x configure
-    ./configure  --enable-python --enable-roofit --enable-minuit2 > ../../root-build.log 2>&1
-    make >> ../../root-build.log 2>&1
-    source bin/thisroot.sh
+    mkdir build
+    cd build
+    #cat ./configure | sed s:'enable_cxx11=yes':'enable_cxx11=no': > configurex
+    #mv configurex configure
+    #chmod a+x configure
+    echo starting configure
+#    ./configure  --enable-python --enable-roofit --enable-minuit2 > ../../root-build.log 2>&1
+    cmake -DCMAKE_INSTALL_PREFIX= ../ > ../../../root-build.log 2>&1
+    echo starting make 
+    make -j8 >> ../../root-build.log 2>&1
+    make install >> ../../root-build.log 2>&1
+    #>> ../../root-build.log 2>&1
     echo location 3
     echo `pwd`
     
     cd ../WCSim
     make clean
-    make rootcint > ../../wcsim-build.log 2>&1
-    make > ../../wcsim-build.log 2>&1
+    make rootcint -j8 > ../../wcsim-build.log 2>&1
+    make -j8 > ../../wcsim-build.log 2>&1
 
     
 #git clone https://github.com/hyperk/hk-hyperk.git
@@ -74,8 +80,8 @@ cd ./WCSim
 #git checkout develop
 source ../hk-hyperk/Source_At_Start.sh
 make clean > "../hk-hyperk/log/wcsim-build.log" 2>&1
-make rootcint >> "../hk-hyperk/log/wcsim-build.log" 2>&1
-make
+make rootcint -j8 >> "../hk-hyperk/log/wcsim-build.log" 2>&1
+make -j8
 fi
 
 #######################################################################
