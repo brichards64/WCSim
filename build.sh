@@ -33,12 +33,13 @@ then
     echo `pwd`
 
     cd ../..
-    wget https://cmake.org/files/v3.8/cmake-3.8.0-rc1-Linux-x86_64.tar.gz
+    wget https://cmake.org/files/v3.8/cmake-3.8.0-rc1-Linux-x86_64.tar.gz --no-check-certificate
     tar zxf cmake-3.8.0-rc1-Linux-x86_64.tar.gz
     cd cmake-3.8.0-rc1-Linux-x86_64/bin
     export PATH=`pwd`:$PATH
   
-    
+
+    echo "STARTING ROOT BUILD"
     cd ../..
     git clone http://root.cern.ch/git/root.git root
     cd root
