@@ -11,6 +11,7 @@
 cd build
 if [ $1 = "dependancies" ]
 then
+    echo STARTING CLHEP BUILD `pwd`
     git clone https://github.com/hyperk/CLHEP.git CLHEP
     cd CLHEP/
     mkdir build
@@ -20,7 +21,8 @@ then
     make install >> ../../../clhep-build.log 2>&1
     echo location 1
     echo `pwd`
-    
+
+    echo STARTING GEANT4 BUILD `pwd`
     cd ../..
     git clone https://github.com/hyperk/Geant4.git Geant4
     cd Geant4
@@ -32,6 +34,7 @@ then
     echo location 2
     echo `pwd`
 
+    echo STARTING CMAKE BUILD `pwd`
     cd ../..
     wget https://cmake.org/files/v3.8/cmake-3.8.0-rc1-Linux-x86_64.tar.gz --no-check-certificate
     tar zxf cmake-3.8.0-rc1-Linux-x86_64.tar.gz
@@ -39,7 +42,7 @@ then
     export PATH=`pwd`:$PATH
   
 
-    echo "STARTING ROOT BUILD"
+    echo STARTING ROOT BUILD `pwd`
     cd ../..
     git clone http://root.cern.ch/git/root.git root
     cd root
@@ -57,11 +60,12 @@ then
     #>> ../../root-build.log 2>&1
     echo location 3
     echo `pwd`
-    
-    cd ../WCSim
-    make clean
-    make rootcint -j8 > ../../wcsim-build.log 2>&1
-    make -j8 > ../../wcsim-build.log 2>&1
+
+    echo STARTING WCSIM BUILD `pwd`
+    cd ../../WCSim
+  # make clean
+  #  make rootcint -j8 > ../../wcsim-build.log 2>&1
+  #  make -j8 > ../../wcsim-build.log 2>&1
 
     
 #git clone https://github.com/hyperk/hk-hyperk.git
