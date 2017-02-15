@@ -67,6 +67,7 @@ then
   #  make rootcint -j8 > ../../wcsim-build.log 2>&1
   #  make -j8 > ../../wcsim-build.log 2>&1
 
+    echo FINNISHED BUILDING 
     
 #git clone https://github.com/hyperk/hk-hyperk.git
 #cd hk-hyperk
