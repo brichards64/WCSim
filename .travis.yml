@@ -16,7 +16,6 @@ addons:
     - libxft-dev
     - libxext-dev
     - libatomic-ops-dev 
-    - root-system
 
 
 install: true
