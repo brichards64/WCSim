@@ -8,7 +8,7 @@ addons:
     - git
     - dpkg-dev
     - make
-    - g++-4.8
+    - g++
     - gcc
     - binutils
     - libx11-dev
@@ -16,7 +16,7 @@ addons:
     - libxft-dev
     - libxext-dev
     - libatomic-ops-dev 
-   
+    - root-system
 
 
 install: true
