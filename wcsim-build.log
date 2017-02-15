@@ -2,7 +2,26 @@ make: root-config: Command not found
 make: root-config: Command not found
 mkdir -p ./tmp//WCSim
 Compiling WCSimRootEvent.cc ...
+Compiling WCSimRootGeom.cc ...
+Compiling WCSimPmtInfo.cc ...
 g++ -Wno-deprecated -I/home/travis/build/brichards64/tmp/build/WCSim/include -I/include -DUSE_ROOT -fPIC -c -o ./tmp//WCSim/WCSimRootEvent.o src/WCSimRootEvent.cc
+Compiling WCSimEnumerations.cc ...
+g++ -Wno-deprecated -I/home/travis/build/brichards64/tmp/build/WCSim/include -I/include -DUSE_ROOT -fPIC -c -o ./tmp//WCSim/WCSimRootGeom.o src/WCSimRootGeom.cc
+make: root-config: Command not found
+g++ -Wno-deprecated -I/home/travis/build/brichards64/tmp/build/WCSim/include -I/include -DUSE_ROOT -fPIC -c -o ./tmp//WCSim/WCSimPmtInfo.o src/WCSimPmtInfo.cc
+Compiling rootcint ...
+rootcint  -f ./src/WCSimRootDict.cc -c -I./include -I WCSimRootEvent.hh WCSimRootGeom.hh  WCSimPmtInfo.hh WCSimEnumerations.hh WCSimRootLinkDef.hh
+make: rootcint: Command not found
+make: *** [src/WCSimRootDict.cc] Error 127
+make: *** Waiting for unfinished jobs....
+g++ -Wno-deprecated -I/home/travis/build/brichards64/tmp/build/WCSim/include -I/include -DUSE_ROOT -fPIC -c -o ./tmp//WCSim/WCSimEnumerations.o src/WCSimEnumerations.cc
 src/WCSimRootEvent.cc:4:21: fatal error: TObject.h: No such file or directory
 compilation terminated.
+In file included from src/WCSimPmtInfo.cc:1:0:
+/home/travis/build/brichards64/tmp/build/WCSim/include/WCSimPmtInfo.hh:10:21: fatal error: TObject.h: No such file or directory
+compilation terminated.
+src/WCSimRootGeom.cc:5:21: fatal error: TObject.h: No such file or directory
+compilation terminated.
 make: *** [tmp//WCSim/WCSimRootEvent.o] Error 1
+make: *** [tmp//WCSim/WCSimPmtInfo.o] Error 1
+make: *** [tmp//WCSim/WCSimRootGeom.o] Error 1
