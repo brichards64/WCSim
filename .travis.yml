@@ -8,7 +8,7 @@ addons:
     - git
     - dpkg-dev
     - make
-    - g++
+    - g++-4.8
     - gcc
     - binutils
     - libx11-dev
