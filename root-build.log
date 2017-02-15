@@ -175,3 +175,6 @@ See also "/home/travis/build/brichards64/tmp/build/root/build/CMakeFiles/CMakeEr
 Makefile:20: config/Makefile.config: No such file or directory
 Makefile:49: config/Makefile.comp: No such file or directory
 Makefile:60: *** Please run ./configure first.  Stop.
+Makefile:20: config/Makefile.config: No such file or directory
+Makefile:49: config/Makefile.comp: No such file or directory
+Makefile:60: *** Please run ./configure first.  Stop.
