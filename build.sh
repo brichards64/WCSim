@@ -82,6 +82,7 @@ fi
 
 if [ $1 != "dependancies" ]
 then
+    echo STARTING STANDARD BUILD
 cd ./WCSim
 #git checkout develop
 source ../hk-hyperk/Source_At_Start.sh
@@ -94,3 +95,4 @@ fi
 
 cd ../../
 
+echo FINNISHED BUILD SCRIPT
