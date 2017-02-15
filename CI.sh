@@ -90,7 +90,7 @@ fi
 
 ################################### Push results to webpage #####################
 
-more root-build.log
+#more root-build.log
 
 git add -A
 git reset -- build/*
