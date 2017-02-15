@@ -31,6 +31,13 @@ then
   #  make install >> ../../../geant4-build.log 2>&1
     echo location 2
     echo `pwd`
+
+    cd ../..
+    wget https://cmake.org/files/v3.8/cmake-3.8.0-rc1-Linux-x86_64.tar.gz
+    tar zxf cmake-3.8.0-rc1-Linux-x86_64.tar.gz
+    cd cmake-3.8.0-rc1-Linux-x86_64/bin
+    export PATH=`pwd`:$PATH
+  
     
     cd ../..
     git clone http://root.cern.ch/git/root.git root
