@@ -52,11 +52,13 @@ then
     #mv configurex configure
     #chmod a+x configure
     echo starting configure
-#    ./configure  --enable-python --enable-roofit --enable-minuit2 > ../../root-build.log 2>&1
-    cmake -DCMAKE_INSTALL_PREFIX= ../ > ../../../root-build.log 2>&1
+    cd ../
+  #./configure  --enable-python --enable-roofit --enable-minuit2 > ../../root-build.log 2>&1
+   ./configure
+   # cmake -DCMAKE_INSTALL_PREFIX= ../ > ../../../root-build.log 2>&1
     echo starting make 
     make -j8 >> ../../root-build.log 2>&1
-    make install >> ../../root-build.log 2>&1
+    #make install >> ../../root-build.log 2>&1
     #>> ../../root-build.log 2>&1
     ls ./bin/
     source ./bin/thisroot.sh
