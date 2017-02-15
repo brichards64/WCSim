@@ -172,3 +172,6 @@ Call Stack (most recent call first):
 -- Configuring incomplete, errors occurred!
 See also "/home/travis/build/brichards64/tmp/build/root/build/CMakeFiles/CMakeOutput.log".
 See also "/home/travis/build/brichards64/tmp/build/root/build/CMakeFiles/CMakeError.log".
+Makefile:20: config/Makefile.config: No such file or directory
+Makefile:49: config/Makefile.comp: No such file or directory
+Makefile:60: *** Please run ./configure first.  Stop.
