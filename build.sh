@@ -66,7 +66,7 @@ then
     echo `pwd`
 
     echo STARTING WCSIM BUILD `pwd`
-    cd ../../WCSim
+    cd ../WCSim
    make clean
     make rootcint -j8 > ../../wcsim-build.log 2>&1
    make -j8 > ../../wcsim-build.log 2>&1
