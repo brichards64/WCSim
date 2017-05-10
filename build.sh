@@ -48,18 +48,18 @@ then
     cd root
     mkdir build
     cd build
-    #cat ./configure | sed s:'enable_cxx11=yes':'enable_cxx11=no': > configurex
-    #mv configurex configure
-    #chmod a+x configure
+#    #cat ./configure | sed s:'enable_cxx11=yes':'enable_cxx11=no': > configurex
+#    #mv configurex configure
+#    #chmod a+x configure
     echo starting configure
-    cd ../
-  #./configure  --enable-python --enable-roofit --enable-minuit2 > ../../root-build.log 2>&1
-   ./configure --disable-cxx11
-   # cmake -DCMAKE_INSTALL_PREFIX= ../ > ../../../root-build.log 2>&1
+   # cd ../
+#  #./configure  --enable-python --enable-roofit --enable-minuit2 > ../../root-build.log 2>&1
+   #./configure --disable-cxx11
+    cmake -DCMAKE_INSTALL_PREFIX= ../ > ../../../root-build.log 2>&1
     echo starting make 
     make -j8 >> ../../root-build.log 2>&1
-    #make install >> ../../root-build.log 2>&1
-    #>> ../../root-build.log 2>&1
+#    #make install >> ../../root-build.log 2>&1
+#    #>> ../../root-build.log 2>&1
     ls ./bin/
     source ./bin/thisroot.sh
     echo location 3
