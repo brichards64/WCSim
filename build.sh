@@ -46,8 +46,11 @@ then
     cd ../..
     git clone http://root.cern.ch/git/root.git root
     cd root
+    ls
+    echo `pwd`
     mkdir build
     cd build
+    echo `pwd`
 #    #cat ./configure | sed s:'enable_cxx11=yes':'enable_cxx11=no': > configurex
 #    #mv configurex configure
 #    #chmod a+x configure
@@ -57,7 +60,7 @@ then
    #./configure --disable-cxx11
     cmake -DCMAKE_INSTALL_PREFIX= ../ > ../../../root-build.log 2>&1
     echo starting make 
-    make -j8 >> ../../root-build.log 2>&1
+    make -j8 >> ../../../root-build.log 2>&1
    # make install >> ../../root-build.log 2>&1
 #    #>> ../../root-build.log 2>&1
     ls ./bin/ -al
