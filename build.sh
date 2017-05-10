@@ -58,7 +58,7 @@ then
     cmake -DCMAKE_INSTALL_PREFIX= ../ > ../../../root-build.log 2>&1
     echo starting make 
     make -j8 >> ../../root-build.log 2>&1
-    make install >> ../../root-build.log 2>&1
+   # make install >> ../../root-build.log 2>&1
 #    #>> ../../root-build.log 2>&1
     ls ./bin/
     source ./bin/thisroot.sh
