@@ -1,5 +1,5 @@
--- The C compiler identification is GNU 4.6.3
--- The CXX compiler identification is GNU 4.6.3
+-- The C compiler identification is GNU 4.8.4
+-- The CXX compiler identification is GNU 4.8.4
 -- Check for working C compiler: /usr/bin/gcc
 -- Check for working C compiler: /usr/bin/gcc -- works
 -- Detecting C compiler ABI info
@@ -12,11 +12,11 @@
 -- Detecting CXX compiler ABI info - done
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- The Fortran compiler identification is unknown
--- Found GCC. Major version 4, minor version 6
+-- Looking for a Fortran compiler
+-- Looking for a Fortran compiler - NOTFOUND
+-- Found GCC. Major version 4, minor version 8
 -- Performing Test HAS_CXX11
--- Performing Test HAS_CXX11 - Failed
--- Current compiler does not suppport -std=c++11 option. Switching OFF cxx11 option
+-- Performing Test HAS_CXX11 - Success
 -- Looking for pthread.h
 -- Looking for pthread.h - found
 -- Looking for pthread_create
@@ -28,22 +28,24 @@
 -- Found Threads: TRUE  
 -- Found a 64bit system
 -- Found GNU compiler collection
+-- Performing Test GLIBCXX_USE_CXX11_ABI
+-- Performing Test GLIBCXX_USE_CXX11_ABI - Failed
 -- ROOT Platform: linux
 -- ROOT Architecture: linuxx8664gcc
 -- Build Type: RelWithDebInfo
--- Compiler Flags:  -pipe -m64  -Wshadow -Wall -W -Woverloaded-virtual -fsigned-char -fPIC -pthread -O2 -g -DNDEBUG
+-- Compiler Flags:  -pipe -m64  -Wshadow -Wall -W -Woverloaded-virtual -fsigned-char -fPIC -pthread -std=c++11 -O2 -g -DNDEBUG
 -- Looking for ZLib
--- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.3.4") 
+-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.8") 
 -- Looking for Unuran
 -- Could NOT find UNURAN (missing:  UNURAN_LIBRARY UNURAN_INCLUDE_DIR) 
 -- Unuran not found. Switching on builtin_unuran option
 -- Looking for Freetype
--- Found Freetype: /usr/lib/x86_64-linux-gnu/libfreetype.so (found version "2.4.8") 
+-- Found Freetype: /usr/lib/x86_64-linux-gnu/libfreetype.so (found version "2.5.2") 
 -- Looking for PCRE
 -- Found PCRE: /usr/include  
 -- Looking for LZMA
--- LZMA not found. Switching on builtin_lzma option
--- Building LZMA version 5.2.1 included in ROOT itself
+-- Found LZMA includes at /usr/include
+-- Found LZMA library at /usr/lib/x86_64-linux-gnu/liblzma.so
 -- Looking for X11
 -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so
 -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found
@@ -67,8 +69,8 @@
 -- X11_Xext_INCLUDE_PATH: 
 -- X11_Xext_LIB: /usr/lib/x86_64-linux-gnu/libXext.so
 -- Could NOT find GIF (missing:  GIF_LIBRARY GIF_INCLUDE_DIR) 
--- Found TIFF: /usr/lib/x86_64-linux-gnu/libtiff.so (found version "3.9.5") 
--- Found PNG: /usr/lib/x86_64-linux-gnu/libpng.so (found version "1.2.46") 
+-- Found TIFF: /usr/lib/x86_64-linux-gnu/libtiff.so (found version "4.0.3") 
+-- Found PNG: /usr/lib/x86_64-linux-gnu/libpng.so (found version "1.2.50") 
 -- Found JPEG: /usr/lib/x86_64-linux-gnu/libjpeg.so  
 -- Building AfterImage library included in ROOT itself
 -- Looking for GSL
@@ -77,9 +79,9 @@
 --                Alternatively, you can also enable the option 'builtin_gsl' to build the GSL libraries internally'
 --                For the time being switching OFF 'mathmore' option
 -- Looking for Python
--- Found PythonInterp: /usr/bin/python (found version "2.7.3") 
+-- Found PythonInterp: /opt/python/2.7.12/bin/python (found version "2.7.12") 
 -- Found Python interpreter version 2.7
--- Found PythonLibs: /usr/lib/libpython2.7.so (found version "2.7.3") 
+-- Found PythonLibs: /opt/python/2.7.12/lib/libpython2.7.so (found version "2.7.12") 
 -- Looking for OpenGL
 -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libGL.so  
 -- Looking for gl2ps
@@ -93,9 +95,9 @@
 -- Looking for Kerberos 5
 -- Found KRB5: /usr/lib/x86_64-linux-gnu/libkrb5.so  
 -- Looking for LibXml2
--- Found LibXml2: /usr/lib/x86_64-linux-gnu/libxml2.so (found version "2.7.8") 
+-- Found LibXml2: /usr/lib/x86_64-linux-gnu/libxml2.so (found version "2.9.1") 
 -- Looking for OpenSSL
--- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libssl.so (found version "1.0.1") 
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libssl.so (found version "1.0.1f") 
 -- Looking for Castor
 -- Could NOT find CASTOR (missing:  CASTOR_shift_LIBRARY CASTOR_INCLUDE_DIR) 
 -- Castor not found. Switching off castor option
@@ -112,8 +114,7 @@
 --    currently found libs: ORACLE_LIBRARY_OCCI-NOTFOUND;ORACLE_LIBRARY_CLNTSH-NOTFOUND;ORACLE_LIBRARY_LNNZ-NOTFOUND
 -- Oracle not found. Switching off oracle option
 -- Looking for ODBC
--- Could NOT find ODBC (missing:  ODBC_INCLUDE_DIR ODBC_LIBRARY) 
--- ODBC not found. Switching off odbc option
+-- Found ODBC: /usr/include  
 -- Looking for PostgreSQL
 -- Found PostgreSQL: /usr/include/postgresql  
 -- Looking for SQLite
@@ -153,28 +154,69 @@
 -- hdfs library not found. Set variable HDFS_DIR to point to your hdfs installation
 -- For the time being switching OFF 'hdfs' option
 -- Looking for DAVIX
--- Could NOT find DAVIX (missing:  DAVIX_INCLUDE_DIRS DAVIX_LIBRARIES) 
+-- Could NOT find DAVIX (missing:  DAVIX_INCLUDE_DIR DAVIX_LIBRARY) 
 -- Davix not found. You can enable the option 'builtin_davix' to build the library internally'
 --                  For the time being switching off 'davix' option
+-- Looking for TBB
+-- Could NOT find TBB (missing:  TBB_ROOT_DIR TBB_INCLUDE_DIR TBB_LIBRARY) 
+-- TBB not found. Switching on builtin_tbb option
+-- Performing Test CXX_HAS_mno_rtm
+-- Performing Test CXX_HAS_mno_rtm - Success
+-- Looking for BLAS for optional parts of TMVA
+-- Looking for sgemm_
+-- Looking for sgemm_ - found
+-- A library with BLAS API found.
 -- >>> Option 'glite' not implemented yet! Signal your urgency to pere.mato@cern.ch
 -- >>> Option 'sapdb' not implemented yet! Signal your urgency to pere.mato@cern.ch
 -- >>> Option 'srp' not implemented yet! Signal your urgency to pere.mato@cern.ch
--- Enabled support for:  asimage astiff builtin_afterimage builtin_ftgl builtin_gl2ps builtin_glew builtin_unuran builtin_lzma builtin_llvm cling exceptions explicitlink fortran gviz genvector krb5 ldap memstat mysql opengl pch pgsql python shadowpw shared sqlite ssl thread tmva xft xml x11
+-- Enabled support for:  asimage astiff builtin_afterimage builtin_ftgl builtin_gl2ps builtin_glew builtin_llvm builtin_tbb builtin_unuran cling cxx11 exceptions explicitlink fortran genvector gviz imt krb5 ldap memstat mysql odbc opengl pch pgsql python shadowpw shared sqlite ssl thread tmva x11 xft xml
 -- The ASM compiler identification is GNU
 -- Found assembler: /usr/bin/gcc
-CMake Error at interpreter/llvm/src/cmake/modules/CheckAtomic.cmake:52 (message):
-  Host compiler appears to require libatomic, but cannot find it.
-Call Stack (most recent call first):
-  interpreter/llvm/src/cmake/config-ix.cmake:317 (include)
-  interpreter/llvm/src/CMakeLists.txt:458 (include)
-
-
--- Configuring incomplete, errors occurred!
-See also "/home/travis/build/brichards64/tmp/build/root/build/CMakeFiles/CMakeOutput.log".
-See also "/home/travis/build/brichards64/tmp/build/root/build/CMakeFiles/CMakeError.log".
-Makefile:20: config/Makefile.config: No such file or directory
-Makefile:49: config/Makefile.comp: No such file or directory
-Makefile:60: *** Please run ./configure first.  Stop.
-Makefile:20: config/Makefile.config: No such file or directory
-Makefile:49: config/Makefile.comp: No such file or directory
-Makefile:60: *** Please run ./configure first.  Stop.
+-- Target triple: x86_64-unknown-linux-gnu
+-- Native target architecture is X86
+-- Threads disabled.
+-- Doxygen disabled.
+-- Sphinx disabled.
+-- Go bindings enabled.
+-- Could NOT find OCaml (missing:  OCAMLFIND OCAML_VERSION OCAML_STDLIB_PATH) 
+-- Could NOT find OCaml (missing:  OCAMLFIND OCAML_VERSION OCAML_STDLIB_PATH) 
+-- OCaml bindings disabled.
+-- Building with -fPIC
+-- Constructing LLVMBuild project information
+-- Targeting X86
+-- Clang version: 3.9.0
+-- Cling version (from VERSION file): ROOT_0.4~dev
+-- Cling will look for C++ headers in '/usr/include/c++/4.8:/usr/include/x86_64-linux-gnu/c++/4.8:/usr/include/c++/4.8/backward' at runtime.
+-- And if not found, will invoke: 'g++-4.8' for them.
+-- Performing Test CXX_HAS_fno_rtti
+-- Performing Test CXX_HAS_fno_rtti - Success
+-- Performing Test CXX_HAS_Wno_conditional_uninitialized
+-- Performing Test CXX_HAS_Wno_conditional_uninitialized - Success
+-- Performing Test CXX_HAS_Wno_deprecated_declarations
+-- Performing Test CXX_HAS_Wno_deprecated_declarations - Success
+-- Performing Test C_HAS_Wno_strict_overflow
+-- Performing Test C_HAS_Wno_strict_overflow - Success
+-- Performing Test C_HAS_Wno_maybe_uninitialized
+-- Performing Test C_HAS_Wno_maybe_uninitialized - Success
+-- Performing Test C_HAS_Wno_parentheses_equality
+-- Performing Test C_HAS_Wno_parentheses_equality - Success
+-- Performing Test CXX_HAS_fno_strict_aliasing
+-- Performing Test CXX_HAS_fno_strict_aliasing - Success
+-- Performing Test CXX_HAS_Wno_parentheses_equality
+-- Performing Test CXX_HAS_Wno_parentheses_equality - Success
+-- TMVA: Deactivate PyMVA because numpy is not found
+-- Performing Test found_setresuid
+-- Performing Test found_setresuid - Success
+-- Performing Test found_stdstringview
+-- Performing Test found_stdstringview - Failed
+-- Performing Test found_stdexpstringview
+-- Performing Test found_stdexpstringview - Failed
+-- Performing Test found_stdapply
+-- Performing Test found_stdapply - Failed
+-- Performing Test found_stdinvoke
+-- Performing Test found_stdinvoke - Failed
+Running /home/travis/build/brichards64/tmp/build/root/build/unix/compiledata.sh
+Making include/compiledata.h
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/travis/build/brichards64/tmp/build/root/build
