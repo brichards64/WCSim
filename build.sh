@@ -28,9 +28,9 @@ then
     cd Geant4
     mkdir build
     cd build
-   # cmake -DGEANT4_INSTALL_DATA=ON -DGEANT4_INSTALL_DATADIR=./Data -DCMAKE_INSTALL_PREFIX=./install -DCLHEP_VERSION_OK=${CLHEP_VERSION} -DCLHEP_LIBRARIES= ./lib -DCLHEP_INCLUDE_DIRS= ./include ../source/4.10.01.p02/ > ../../../geant4-build.log 2>&1
-  # make -j8 >> ../../../geant4-build.log 2>&1
-  # make install >> ../../../geant4-build.log 2>&1
+    cmake -DGEANT4_INSTALL_DATA=ON -DGEANT4_INSTALL_DATADIR=./Data -DCMAKE_INSTALL_PREFIX=./install -DCLHEP_VERSION_OK=${CLHEP_VERSION} -DCLHEP_LIBRARIES= ./lib -DCLHEP_INCLUDE_DIRS= ./include ../source/4.10.01.p02/ > ../../../geant4-build.log 2>&1
+    make -j8 >> ../../../geant4-build.log 2>&1
+    make install >> ../../../geant4-build.log 2>&1
     echo location 2
     echo `pwd`
 
@@ -58,10 +58,11 @@ then
     cmake -DCMAKE_INSTALL_PREFIX= ../ > ../../../root-build.log 2>&1
     echo starting make 
     make -j8 >> ../../root-build.log 2>&1
-#    #make install >> ../../root-build.log 2>&1
+    make install >> ../../root-build.log 2>&1
 #    #>> ../../root-build.log 2>&1
     ls ./bin/
     source ./bin/thisroot.sh
+    ./bin/thisroot.sh
     echo location 3
     echo `pwd`
 
