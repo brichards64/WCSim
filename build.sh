@@ -60,7 +60,7 @@ then
     make -j8 >> ../../root-build.log 2>&1
    # make install >> ../../root-build.log 2>&1
 #    #>> ../../root-build.log 2>&1
-    ls ./bin/
+    ls ./bin/ -al
     source ./bin/thisroot.sh
     ./bin/thisroot.sh
     echo location 3
