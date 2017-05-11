@@ -44,24 +44,26 @@ then
 
     echo STARTING ROOT BUILD `pwd`
     cd ../..
-    svn co http://root.cern.ch/svn/root/tags/v5-28-00h root
+    #svn co http://root.cern.ch/svn/root/tags/v5-28-00h root
+    wget https://root.cern.ch/download/root_v5.28.00.source.tar.gz
     #git clone http://root.cern.ch/git/root.git root
+    tar -zxf root_v5.28.00.source.tar.gz
     cd root
     ls
     echo `pwd`
-    mkdir build
-    cd build
+    #mkdir build
+    #cd build
     echo `pwd`
 #    #cat ./configure | sed s:'enable_cxx11=yes':'enable_cxx11=no': > configurex
 #    #mv configurex configure
 #    #chmod a+x configure
     echo starting configure
    # cd ../
-#  #./configure  --enable-python --enable-roofit --enable-minuit2 > ../../root-build.log 2>&1
+    ./configure  --enable-python --enable-roofit --enable-minuit2 > ../../root-build.log 2>&1
    #./configure --disable-cxx11
-    cmake -DCMAKE_INSTALL_PREFIX= ../ > ../../../root-build.log 2>&1
+    #cmake -DCMAKE_INSTALL_PREFIX= ../ > ../../../root-build.log 2>&1
     echo starting make 
-    make -j8 >> ../../../root-build.log 2>&1
+    make -j8 >> ../../root-build.log 2>&1
    # make install >> ../../root-build.log 2>&1
 #    #>> ../../root-build.log 2>&1
     ls ./bin/ -al
