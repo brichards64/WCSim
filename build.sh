@@ -44,7 +44,8 @@ then
 
     echo STARTING ROOT BUILD `pwd`
     cd ../..
-    git clone http://root.cern.ch/git/root.git root
+    svn co http://root.cern.ch/svn/root/tags/v5-28-00h root
+    #git clone http://root.cern.ch/git/root.git root
     cd root
     ls
     echo `pwd`
