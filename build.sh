@@ -59,7 +59,7 @@ then
 #    #chmod a+x configure
     echo starting configure
    # cd ../
-    ./configure  --enable-python --enable-roofit --enable-minuit2 > ../../root-build.log 2>&1
+    ./configure  --enable-python --enable-roofit --enable-minuit2 --enable-explicitlink --enable-soversion --enable-rpath --all > ../../root-build.log 2>&1
    #./configure --disable-cxx11
     #cmake -DCMAKE_INSTALL_PREFIX= ../ > ../../../root-build.log 2>&1
     echo starting make 
